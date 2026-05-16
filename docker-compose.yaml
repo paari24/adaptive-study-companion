@@ -9,6 +9,9 @@ services:
       - DATABASE_URL=${DATABASE_URL}
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
       - VOYAGE_API_KEY=${VOYAGE_API_KEY:-}
+    networks:
+      - default
+      - coolify
     restart: unless-stopped
 
   frontend:
@@ -24,3 +27,7 @@ services:
     depends_on:
       - backend
     restart: unless-stopped
+
+networks:
+  coolify:
+    external: true
