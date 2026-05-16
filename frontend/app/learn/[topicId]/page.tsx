@@ -10,7 +10,7 @@ import AssessmentModal from '../../../components/AssessmentModal';
 import StateIndicator from '../../../components/StateIndicator';
 import TopicSummary from '../../../components/TopicSummary';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000';
+const API_URL = '';
 
 function LearnPageInner() {
   const { state, dispatch } = useLearningSession();
@@ -32,9 +32,9 @@ function LearnPageInner() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col">
+    <div className="h-screen bg-slate-950 flex flex-col overflow-hidden">
       {/* Header */}
-      <header className="flex items-center justify-between px-6 py-3 border-b border-slate-800 bg-slate-900">
+      <header className="flex-shrink-0 flex items-center justify-between px-6 py-3 border-b border-slate-800 bg-slate-900">
         <button
           onClick={() => router.push('/')}
           className="text-slate-400 hover:text-white text-sm transition-colors"
@@ -47,12 +47,14 @@ function LearnPageInner() {
         </span>
       </header>
 
-      {/* Main layout */}
-      <div className="flex flex-1 overflow-hidden">
-        <div className="w-[55%] border-r border-slate-800 overflow-y-auto">
+      {/* Main layout — fills all space between header and state bar */}
+      <div className="flex flex-1 min-h-0">
+        {/* Content panel — independent scroll */}
+        <div className="w-[55%] border-r border-slate-800 flex flex-col min-h-0">
           <ContentPanel />
         </div>
-        <div className="w-[45%] flex flex-col">
+        {/* Chat panel — independent scroll */}
+        <div className="w-[45%] flex flex-col min-h-0">
           <ChatPanel />
         </div>
       </div>

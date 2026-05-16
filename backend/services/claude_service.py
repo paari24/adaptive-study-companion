@@ -35,11 +35,11 @@ def evaluate(prompt: str) -> dict:
             return json.loads(text[start:end])
         except json.JSONDecodeError:
             pass
-    # Fallback
+    # Fallback — fail safe so random text doesn't get a passing score
     return {
-        "score": 60,
-        "isCorrect": True,
-        "feedback": "Your answer shows understanding of the topic.",
+        "score": 0,
+        "isCorrect": False,
+        "feedback": "Something went wrong evaluating your answer. Please try again.",
         "conceptsCovered": [],
         "conceptsMissing": [],
     }

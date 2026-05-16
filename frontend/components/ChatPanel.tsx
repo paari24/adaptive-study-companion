@@ -40,9 +40,9 @@ export default function ChatPanel() {
   }[state.behavioralState.activeState];
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full min-h-0">
       {/* Header */}
-      <div className="px-4 py-3 border-b border-slate-800 bg-slate-900/50 flex items-center justify-between">
+      <div className="flex-shrink-0 px-4 py-3 border-b border-slate-800 bg-slate-900/50 flex items-center justify-between">
         <div>
           <p className="text-sm font-medium text-white">AI Study Companion</p>
           <p className="text-xs text-slate-500">Ask anything about this section</p>
@@ -53,13 +53,13 @@ export default function ChatPanel() {
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
+      <div className="flex-1 min-h-0 overflow-y-auto px-4 py-4 space-y-3">
         {currentMessages.length === 0 && (
-          <div className="text-center py-8">
-            <div className="w-12 h-12 rounded-full bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center mx-auto mb-3 text-xl">
+          <div className="flex flex-col items-center pt-8 pb-4">
+            <div className="w-10 h-10 rounded-full bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center mb-3 text-lg">
               🤖
             </div>
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-400 text-sm text-center leading-relaxed">
               Hi! I&apos;m your study companion for this section.
               <br />
               Ask me anything about{' '}
@@ -68,36 +68,45 @@ export default function ChatPanel() {
           </div>
         )}
 
-        {currentMessages.map((msg, i) => (
-          <div
-            key={i}
-            className={`flex ${msg.role === 'student' ? 'justify-end' : 'justify-start'}`}
-          >
-            {msg.role === 'assistant' && (
-              <div className="w-7 h-7 rounded-full bg-indigo-600/30 border border-indigo-500/40 flex items-center justify-center text-xs mr-2 flex-shrink-0 mt-1">
-                🤖
+        {currentMessages.map((msg, i) => {
+          if (msg.isNudge) {
+            return (
+              <div key={i} className="flex justify-center">
+                <div className="flex items-center gap-2 bg-amber-500/10 border border-amber-500/25 text-amber-300 text-xs px-3 py-2 rounded-full max-w-[90%] text-center">
+                  <span>💡</span>
+                  <span>{msg.content}</span>
+                </div>
               </div>
-            )}
-            <div
-              className={`max-w-[80%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${
-                msg.role === 'student'
-                  ? 'bg-indigo-600 text-white rounded-br-sm'
-                  : msg.isNudge
-                  ? 'bg-amber-500/10 border border-amber-500/30 text-amber-200 rounded-bl-sm'
-                  : 'bg-slate-800 text-slate-200 rounded-bl-sm'
-              }`}
-            >
-              {msg.content}
+            );
+          }
+
+          const isStudent = msg.role === 'student';
+          return (
+            <div key={i} className={`flex items-end gap-2 ${isStudent ? 'justify-end' : 'justify-start'}`}>
+              {!isStudent && (
+                <div className="w-6 h-6 rounded-full bg-indigo-600/30 border border-indigo-500/40 flex items-center justify-center text-xs flex-shrink-0">
+                  🤖
+                </div>
+              )}
+              <div
+                className={`max-w-[75%] px-3 py-2.5 rounded-2xl text-sm leading-relaxed ${
+                  isStudent
+                    ? 'bg-indigo-600 text-white rounded-br-none'
+                    : 'bg-slate-800 text-slate-200 rounded-bl-none'
+                }`}
+              >
+                {msg.content}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
 
         {loading && (
-          <div className="flex justify-start">
-            <div className="w-7 h-7 rounded-full bg-indigo-600/30 border border-indigo-500/40 flex items-center justify-center text-xs mr-2 flex-shrink-0 mt-1">
+          <div className="flex items-end gap-2 justify-start">
+            <div className="w-6 h-6 rounded-full bg-indigo-600/30 border border-indigo-500/40 flex items-center justify-center text-xs flex-shrink-0">
               🤖
             </div>
-            <div className="bg-slate-800 px-4 py-3 rounded-2xl rounded-bl-sm">
+            <div className="bg-slate-800 px-4 py-2.5 rounded-2xl rounded-bl-none">
               <div className="flex gap-1 items-center">
                 <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:0ms]" />
                 <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:150ms]" />
@@ -109,8 +118,8 @@ export default function ChatPanel() {
         <div ref={bottomRef} />
       </div>
 
-      {/* Input */}
-      <div className="px-4 py-4 border-t border-slate-800">
+      {/* Input — pinned to bottom */}
+      <div className="flex-shrink-0 px-4 py-4 border-t border-slate-800">
         <div className="flex gap-2">
           <textarea
             value={input}

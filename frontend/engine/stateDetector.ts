@@ -125,6 +125,7 @@ export function processEvent(
   // ── AI interaction ─────────────────────────────────────────────────────────
   if (event.eventType === 'ai_help_requested') {
     s.boredomScore += -10;
+    s.fatigueScore += -10; // actively engaging reduces fatigue
     s.aiInteractedThisSection = true;
   }
 
@@ -167,12 +168,6 @@ export function processEvent(
     }
   }
 
-  // ── Fatigue: session duration ──────────────────────────────────────────────
-  if (sessionMs > SESSION_FATIGUE_START_MS) {
-    const extraMinutes = Math.floor((sessionMs - SESSION_FATIGUE_START_MS) / 60_000);
-    s.fatigueScore += extraMinutes * 2;
-  }
-
   // ── Idle events (from interaction monitor) ─────────────────────────────────
   if (event.eventType === 'idle_detected') {
     const checks = event.consecutiveIdleChecks ?? 1;
@@ -182,9 +177,8 @@ export function processEvent(
         s.boredomScore += 10;
         break;
       case 'no_interaction':
-        s.fatigueScore += checks === 1 ? 10 : checks === 2 ? 15 : 20;
-        s.boredomScore += checks === 1 ? 5 : checks === 2 ? 10 : 15;
-        if (checks >= 3) s.fatigueScore += 15; // 3+ consecutive
+        s.fatigueScore += 8; // flat — escalation caused fatigue spikes during normal reading
+        s.boredomScore += checks <= 2 ? 5 : 10;
         break;
       case 'passive_scroll':
         s.fatigueScore += 5;
@@ -234,11 +228,19 @@ export function processEvent(
   return s;
 }
 
-export function decayScores(prev: BehavioralState): BehavioralState {
+export function decayScores(prev: BehavioralState, sessionStartTime?: number): BehavioralState {
+  // Apply session-duration fatigue here (once per decay tick) instead of on every event
+  let sessionFatigueDelta = 0;
+  if (sessionStartTime !== undefined) {
+    const sessionMs = Date.now() - sessionStartTime;
+    if (sessionMs > SESSION_FATIGUE_START_MS) {
+      sessionFatigueDelta = 1; // +1 per 30s tick = +2/min after SESSION_FATIGUE_START_MS
+    }
+  }
   return {
     ...prev,
     struggleScore: clamp(prev.struggleScore - 2),
     boredomScore: clamp(prev.boredomScore - 2),
-    fatigueScore: clamp(prev.fatigueScore - 2),
+    fatigueScore: clamp(prev.fatigueScore - 2 + sessionFatigueDelta),
   };
 }

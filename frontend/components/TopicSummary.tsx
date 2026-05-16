@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLearningSession } from '../context/LearningSessionContext';
 
@@ -13,10 +14,11 @@ const STATE_COLORS: Record<string, string> = {
 export default function TopicSummary() {
   const { state, dispatch } = useLearningSession();
   const router = useRouter();
+  const savedRef = useRef(false);
 
   if (!state.topic) return null;
 
-  const { topic, sectionScores, sectionResults, behavioralState, sessionStartTime } = state;
+  const { topic, sectionScores, sectionResults, behavioralState, sessionStartTime, completedSections, totalTimeSpentMs } = state;
   const totalTimeMin = Math.round((Date.now() - sessionStartTime) / 60_000);
   const allScores = Object.values(sectionScores);
   const overallAccuracy = allScores.length
@@ -26,6 +28,46 @@ export default function TopicSummary() {
   const weakSections = topic.sections.filter(
     (s) => (sectionResults[s.sectionId]?.peakStruggleScore ?? 0) >= 40
   );
+
+  // Save session to DB once on mount
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    if (savedRef.current) return;
+    savedRef.current = true;
+
+    const peakStruggle = Math.max(0, ...Object.values(sectionResults).map((r) => r.peakStruggleScore));
+    const peakBoredom  = Math.max(0, ...Object.values(sectionResults).map((r) => r.peakBoredomScore));
+    const peakFatigue  = Math.max(0, ...Object.values(sectionResults).map((r) => r.peakFatigueScore));
+
+    let userMobile: string | null = null;
+    try {
+      const stored = localStorage.getItem('user_identity');
+      if (stored) userMobile = JSON.parse(stored).mobile ?? null;
+    } catch {}
+
+    fetch('/api/sessions/save', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sessionId: state.sessionId,
+        topicId: topic.topicId,
+        topicTitle: topic.title,
+        sessionStartTime,
+        totalTimeSpentMs: totalTimeSpentMs || Date.now() - sessionStartTime,
+        completedSections,
+        totalSections: topic.sections.length,
+        sectionResults: Object.values(sectionResults),
+        stateHistory: behavioralState.stateHistory,
+        finalState: behavioralState.activeState,
+        peakStruggle,
+        peakBoredom,
+        peakFatigue,
+        overallScore: overallAccuracy,
+        userMobile,
+      }),
+    }).catch(() => {}); // fire-and-forget
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">

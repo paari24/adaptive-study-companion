@@ -60,9 +60,9 @@ async def evaluate_answer(req: EvaluateRequest) -> EvaluateResponse:
 
     result = claude_service.evaluate(prompt)
     return EvaluateResponse(
-        score=result.get("score", 60),
-        isCorrect=result.get("isCorrect", True),
-        feedback=result.get("feedback", "Good effort!"),
+        score=result.get("score", 0),
+        isCorrect=result.get("isCorrect", False),
+        feedback=result.get("feedback", "Please try again with a proper answer."),
         conceptsCovered=result.get("conceptsCovered", []),
         conceptsMissing=result.get("conceptsMissing", []),
     )

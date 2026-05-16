@@ -37,6 +37,7 @@ import {
 // ─── State ────────────────────────────────────────────────────────────────────
 
 interface SessionState {
+  sessionId: string;
   topic: Topic | null;
   currentSectionIndex: number;
   completedSections: string[];
@@ -62,6 +63,7 @@ type Action =
   | { type: 'START_ASSESSMENT'; sectionId: string }
   | { type: 'COMPLETE_ASSESSMENT'; sectionId: string; score: number; totalQuestions: number }
   | { type: 'NEXT_SECTION' }
+  | { type: 'GO_TO_SECTION'; index: number }
   | { type: 'SEND_CHAT_MESSAGE'; sectionId: string; message: Message }
   | { type: 'RECEIVE_CHAT_RESPONSE'; sectionId: string; message: Message }
   | { type: 'INJECT_NUDGE'; sectionId: string; text: string }
@@ -71,8 +73,13 @@ type Action =
 
 // ─── Reducer ──────────────────────────────────────────────────────────────────
 
+function generateId() {
+  return Math.random().toString(36).slice(2, 9) + Date.now().toString(36);
+}
+
 function initialState(): SessionState {
   return {
+    sessionId: generateId(),
     topic: null,
     currentSectionIndex: 0,
     completedSections: [],
@@ -95,6 +102,7 @@ function reducer(state: SessionState, action: Action): SessionState {
     case 'LOAD_TOPIC': {
       return {
         ...initialState(),
+        sessionId: generateId(),
         topic: action.topic,
         sessionStartTime: Date.now(),
       };
@@ -114,7 +122,7 @@ function reducer(state: SessionState, action: Action): SessionState {
     }
 
     case 'DECAY_SCORES': {
-      const decayed = decayScores(state.behavioralState);
+      const decayed = decayScores(state.behavioralState, state.sessionStartTime);
       const newState = resolveState(decayed);
       return {
         ...state,
@@ -144,6 +152,13 @@ function reducer(state: SessionState, action: Action): SessionState {
         peakFatigueScore: state.behavioralState.fatigueScore,
         stateChanges: state.behavioralState.stateHistory,
       };
+      // Completing an assessment signals re-engagement — reduce fatigue
+      const updatedBehavioral = {
+        ...state.behavioralState,
+        fatigueScore: Math.max(0, state.behavioralState.fatigueScore - 20),
+        boredomScore: Math.max(0, state.behavioralState.boredomScore - 10),
+      };
+      const newActiveState = resolveState(updatedBehavioral);
       return {
         ...state,
         isInAssessment: false,
@@ -151,6 +166,7 @@ function reducer(state: SessionState, action: Action): SessionState {
         completedSections: [...state.completedSections, action.sectionId],
         sectionScores: { ...state.sectionScores, [action.sectionId]: action.score },
         sectionResults: { ...state.sectionResults, [action.sectionId]: result },
+        behavioralState: { ...updatedBehavioral, activeState: newActiveState },
       };
     }
 
@@ -163,6 +179,25 @@ function reducer(state: SessionState, action: Action): SessionState {
       return {
         ...state,
         currentSectionIndex: nextIdx,
+        assessmentCompleted: false,
+        currentAssessmentSectionId: null,
+        behavioralState: {
+          ...state.behavioralState,
+          aiInteractedThisSection: false,
+          sectionScrollStartTime: null,
+          consecutiveCorrect: 0,
+          rapidCorrectStreak: 0,
+        },
+      };
+    }
+
+    case 'GO_TO_SECTION': {
+      const totalSections = state.topic?.sections.length ?? 0;
+      const idx = Math.max(0, Math.min(action.index, totalSections - 1));
+      return {
+        ...state,
+        currentSectionIndex: idx,
+        isInAssessment: false,
         assessmentCompleted: false,
         currentAssessmentSectionId: null,
         behavioralState: {
@@ -279,6 +314,7 @@ export function LearningSessionProvider({
           const data: SessionData = JSON.parse(saved);
           return {
             ...s,
+            sessionId: (data as SessionData & { sessionId?: string }).sessionId ?? generateId(),
             topic: initialTopic,
             currentSectionIndex: data.currentSectionIndex,
             completedSections: data.completedSections,
@@ -297,15 +333,20 @@ export function LearningSessionProvider({
     return s;
   });
   const sessionStartTimeRef = useRef(state.sessionStartTime);
+  const stateRef = useRef(state);
   const activityBufferRef = useRef<ActivityBuffer | null>(null);
   const monitorIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const decayIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const tabHiddenAtRef = useRef<number | null>(null);
 
-  // Keep sessionStartTime in a ref so event callbacks don't stale-close
+  // Keep refs current so callbacks don't stale-close over state
   useEffect(() => {
     sessionStartTimeRef.current = state.sessionStartTime;
   }, [state.sessionStartTime]);
+
+  useEffect(() => {
+    stateRef.current = state;
+  });
 
   // ── Helper: generate event ─────────────────────────────────────────────────
   const dispatchEvent = useCallback(
@@ -444,14 +485,15 @@ export function LearningSessionProvider({
   // ── Persist to localStorage whenever state changes ─────────────────────────
   useEffect(() => {
     if (!state.topic) return;
-    const data: SessionData = {
+    const data = {
+      sessionId: state.sessionId,
       topicId: state.topic.topicId,
       currentSectionIndex: state.currentSectionIndex,
       completedSections: state.completedSections,
       sectionScores: state.sectionScores,
       sectionResults: state.sectionResults,
       behavioralState: state.behavioralState,
-      eventLog: state.eventLog.slice(-100), // keep last 100 events
+      eventLog: state.eventLog.slice(-100),
       chatHistory: state.chatHistory,
       sessionStartTime: state.sessionStartTime,
       totalTimeSpentMs: Date.now() - state.sessionStartTime,
@@ -460,10 +502,54 @@ export function LearningSessionProvider({
     localStorage.setItem(`session_${state.topic.topicId}`, JSON.stringify(data));
   }, [state]);
 
+  // ── Auto-save to DB after each section is completed ───────────────────────
+  useEffect(() => {
+    if (!state.topic || state.completedSections.length === 0) return;
+
+    let userMobile: string | null = null;
+    try {
+      const stored = localStorage.getItem('user_identity');
+      if (stored) userMobile = JSON.parse(stored).mobile ?? null;
+    } catch {}
+
+    const scores = Object.values(state.sectionResults);
+    const peakStruggle = Math.max(0, ...scores.map(r => r.peakStruggleScore));
+    const peakBoredom  = Math.max(0, ...scores.map(r => r.peakBoredomScore));
+    const peakFatigue  = Math.max(0, ...scores.map(r => r.peakFatigueScore));
+    const allScores    = Object.values(state.sectionScores);
+    const overallScore = allScores.length
+      ? Math.round(allScores.reduce((a, b) => a + b, 0) / allScores.length)
+      : 0;
+
+    fetch('/api/sessions/save', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sessionId: state.sessionId,
+        topicId: state.topic.topicId,
+        topicTitle: state.topic.title,
+        sessionStartTime: state.sessionStartTime,
+        totalTimeSpentMs: Date.now() - state.sessionStartTime,
+        completedSections: state.completedSections,
+        totalSections: state.topic.sections.length,
+        sectionResults: Object.values(state.sectionResults),
+        stateHistory: state.behavioralState.stateHistory,
+        finalState: state.behavioralState.activeState,
+        peakStruggle,
+        peakBoredom,
+        peakFatigue,
+        overallScore,
+        userMobile,
+      }),
+    }).catch(() => {});
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.completedSections.length]);
+
   // ── Chat ───────────────────────────────────────────────────────────────────
   const sendChatMessage = useCallback(
     async (sectionId: string, content: string) => {
-      if (!state.topic) return;
+      const s = stateRef.current;
+      if (!s.topic) return;
       const userMsg: Message = {
         role: 'student',
         content,
@@ -471,7 +557,6 @@ export function LearningSessionProvider({
       };
       dispatch({ type: 'SEND_CHAT_MESSAGE', sectionId, message: userMsg });
 
-      // Dispatch AI help event for state scoring
       dispatchEvent({
         eventType: 'ai_help_requested',
         sectionId,
@@ -479,16 +564,16 @@ export function LearningSessionProvider({
         aiHelpRequested: true,
       });
 
-      const section = state.topic.sections[state.currentSectionIndex];
-      const history = state.chatHistory[sectionId] ?? [];
+      const section = s.topic.sections[s.currentSectionIndex];
+      const history = s.chatHistory[sectionId] ?? [];
 
       try {
         const res = await fetch(`${apiUrl}/api/chat`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            topicId: state.topic.topicId,
-            topicName: state.topic.title,
+            topicId: s.topic.topicId,
+            topicName: s.topic.title,
             sectionId,
             sectionContent: section?.content ?? '',
             sectionTitle: section?.title ?? '',
@@ -497,7 +582,7 @@ export function LearningSessionProvider({
               role: m.role === 'student' ? 'user' : 'assistant',
               content: m.content,
             })),
-            activeState: state.behavioralState.activeState,
+            activeState: s.behavioralState.activeState,
           }),
         });
         const data = await res.json();
@@ -516,7 +601,7 @@ export function LearningSessionProvider({
         dispatch({ type: 'RECEIVE_CHAT_RESPONSE', sectionId, message: errMsg });
       }
     },
-    [state, dispatchEvent, apiUrl]
+    [dispatchEvent, apiUrl]
   );
 
   const currentMessages = currentSection

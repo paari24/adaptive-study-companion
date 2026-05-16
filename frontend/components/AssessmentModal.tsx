@@ -10,7 +10,7 @@ import ExplainQuestion from './QuestionRenderers/ExplainQuestion';
 import MatchQuestion from './QuestionRenderers/MatchQuestion';
 import ScenarioQuestion from './QuestionRenderers/ScenarioQuestion';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000';
+const API_URL = '';
 
 export default function AssessmentModal() {
   const { state, dispatch, dispatchEvent, currentSection } = useLearningSession();

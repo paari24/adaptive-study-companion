@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import UserIdentityModal from '../components/UserIdentityModal';
 
 interface TopicMeta {
   topicId: string;
@@ -10,6 +11,11 @@ interface TopicMeta {
   grade: string;
   sectionCount: number;
   emoji: string;
+}
+
+interface UserIdentity {
+  name: string;
+  mobile: string;
 }
 
 const TOPICS: TopicMeta[] = [
@@ -21,8 +27,18 @@ const TOPICS: TopicMeta[] = [
 export default function TopicSelectionPage() {
   const router = useRouter();
   const [resumable, setResumable] = useState<Record<string, { sections: number; total: number }>>({});
+  const [identity, setIdentity] = useState<UserIdentity | null>(null);
+  const [identityChecked, setIdentityChecked] = useState(false);
 
   useEffect(() => {
+    // Load user identity from localStorage
+    try {
+      const stored = localStorage.getItem('user_identity');
+      if (stored) setIdentity(JSON.parse(stored));
+    } catch {}
+    setIdentityChecked(true);
+
+    // Load resumable sessions
     const r: Record<string, { sections: number; total: number }> = {};
     TOPICS.forEach((t) => {
       try {
@@ -38,18 +54,39 @@ export default function TopicSelectionPage() {
     setResumable(r);
   }, []);
 
+  const handleIdentified = (id: UserIdentity) => setIdentity(id);
+
   return (
     <main className="min-h-screen bg-slate-950 text-white">
+      {/* Identity modal — shown until user registers */}
+      {identityChecked && !identity && (
+        <UserIdentityModal onIdentified={handleIdentified} />
+      )}
+
       <div className="max-w-4xl mx-auto px-6 py-16">
-        <div className="mb-12 text-center">
-          <div className="inline-flex items-center gap-2 bg-indigo-600/20 border border-indigo-500/30 rounded-full px-4 py-1.5 mb-6">
-            <span className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse" />
-            <span className="text-indigo-300 text-sm font-medium">AI-Powered Adaptive Learning</span>
+        {/* Top bar */}
+        <div className="flex items-center justify-between mb-12">
+          <div className="flex-1" />
+          <div className="text-center flex-1">
+            <div className="inline-flex items-center gap-2 bg-indigo-600/20 border border-indigo-500/30 rounded-full px-4 py-1.5 mb-4">
+              <span className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse" />
+              <span className="text-indigo-300 text-sm font-medium">AI-Powered Adaptive Learning</span>
+            </div>
+            <h1 className="text-4xl font-bold text-white mb-2">Adaptive Study Companion</h1>
+            {identity && (
+              <p className="text-slate-400 text-base">
+                Welcome back, <span className="text-white font-semibold">{identity.name}</span>! 👋
+              </p>
+            )}
           </div>
-          <h1 className="text-4xl font-bold text-white mb-3">Adaptive Study Companion</h1>
-          <p className="text-slate-400 text-lg max-w-xl mx-auto">
-            Your personal AI tutor that detects when you&apos;re struggling, bored, or tired — and adapts in real-time.
-          </p>
+          <div className="flex-1 flex justify-end">
+            <button
+              onClick={() => router.push('/dashboard')}
+              className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white px-4 py-2 rounded-xl text-sm font-medium transition-colors"
+            >
+              📊 Dashboard
+            </button>
+          </div>
         </div>
 
         <div className="mb-4">
