@@ -44,3 +44,4 @@ Thumbs.db
 
 # Claude Code local session data
 .claude/
+generate_ppt.py
