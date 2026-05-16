@@ -1,0 +1,816 @@
+{
+  "topicId": "photosynthesis",
+  "title": "Photosynthesis",
+  "subject": "Science",
+  "grade": "Class 7",
+  "sections": [
+    {
+      "sectionId": "section-1",
+      "title": "What is Photosynthesis?",
+      "content": "Photosynthesis is the process by which green plants, algae, and some bacteria make their own food using sunlight. The word photosynthesis comes from two Greek words: 'photo' meaning light, and 'synthesis' meaning putting together. So photosynthesis literally means 'putting together with light'.\n\nPlants are called autotrophs (or producers) because they can make their own food. Animals, including humans, cannot make their own food — we must eat plants or other animals to get energy. We are called heterotrophs.\n\nPhotosynthesis happens mainly in the leaves of plants, in tiny structures called chloroplasts. Chloroplasts contain a green pigment called chlorophyll, which gives leaves their green colour. Chlorophyll is the key — it absorbs sunlight and uses that energy to power the food-making process.\n\nThe overall reaction of photosynthesis can be written as:\n\n6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂\n\nIn plain words: Carbon dioxide + Water + Sunlight → Glucose + Oxygen\n\nThe plant takes in carbon dioxide from the air through tiny pores called stomata. It absorbs water from the soil through its roots. Using sunlight captured by chlorophyll, it converts these raw materials into glucose (a sugar) and oxygen. The oxygen is released back into the air — which is why plants are essential for all life on Earth.",
+      "keyConcepts": ["photosynthesis", "chlorophyll", "chloroplasts", "autotrophs", "glucose"],
+      "wordCount": 238,
+      "assessments": {
+        "easy": [
+          {
+            "questionId": "s1-e1",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "What do plants need to carry out photosynthesis?",
+            "options": ["Sunlight, water, and CO₂", "Oxygen and sugar", "Soil and fertilizer", "Wind and nitrogen"],
+            "correctAnswer": "Sunlight, water, and CO₂",
+            "hint": "Think about what the equation 6CO₂ + 6H₂O + light energy → shows.",
+            "explanation": "Plants use sunlight (energy), water (from soil), and carbon dioxide (from air) to make glucose."
+          },
+          {
+            "questionId": "s1-e2",
+            "type": "fill_blank",
+            "difficulty": "easy",
+            "question": "The green pigment in plant leaves that absorbs sunlight is called ___.",
+            "correctAnswer": "chlorophyll",
+            "hint": "It's found inside chloroplasts and gives leaves their green colour.",
+            "explanation": "Chlorophyll is the green pigment inside chloroplasts that captures light energy for photosynthesis."
+          },
+          {
+            "questionId": "s1-e3",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "Where in a plant cell does photosynthesis take place?",
+            "options": ["Chloroplasts", "Mitochondria", "Nucleus", "Cell wall"],
+            "correctAnswer": "Chloroplasts",
+            "hint": "These are green-coloured structures inside leaf cells.",
+            "explanation": "Photosynthesis occurs in chloroplasts, which contain chlorophyll."
+          },
+          {
+            "questionId": "s1-e4",
+            "type": "explain",
+            "difficulty": "easy",
+            "question": "Explain in your own words what a plant releases after photosynthesis and why that is important for us.",
+            "correctAnswer": "oxygen",
+            "hint": "Think about what you breathe in every day.",
+            "explanation": "Plants release oxygen as a byproduct of photosynthesis. All animals, including humans, need oxygen to breathe and survive."
+          }
+        ],
+        "medium": [
+          {
+            "questionId": "s1-m1",
+            "type": "mcq",
+            "difficulty": "medium",
+            "question": "Which of the following correctly describes the role of stomata in photosynthesis?",
+            "options": ["They allow CO₂ to enter and O₂ to exit the leaf", "They absorb water from the soil", "They store glucose produced by the plant", "They convert light into chemical energy"],
+            "correctAnswer": "They allow CO₂ to enter and O₂ to exit the leaf",
+            "hint": "Stomata are tiny pores — think about what gases need to enter and leave.",
+            "explanation": "Stomata are pores on leaves through which CO₂ enters for photosynthesis and O₂ exits as a byproduct."
+          },
+          {
+            "questionId": "s1-m2",
+            "type": "fill_blank",
+            "difficulty": "medium",
+            "question": "Plants that can make their own food are called ___, while animals that cannot are called ___.",
+            "correctAnswer": "autotrophs, heterotrophs",
+            "hint": "'Auto' means self, 'hetero' means other.",
+            "explanation": "Autotrophs (like plants) produce their own food; heterotrophs (like animals) consume other organisms."
+          },
+          {
+            "questionId": "s1-m3",
+            "type": "explain",
+            "difficulty": "medium",
+            "question": "Why would a plant kept in a completely dark room eventually die, even if you water it regularly?",
+            "correctAnswer": "no light means no photosynthesis means no food",
+            "hint": "What does a plant need light for?",
+            "explanation": "Without light, chlorophyll cannot capture energy, so photosynthesis stops. The plant cannot make glucose and starves."
+          },
+          {
+            "questionId": "s1-m4",
+            "type": "mcq",
+            "difficulty": "medium",
+            "question": "In the photosynthesis equation 6CO₂ + 6H₂O + light → C₆H₁₂O₆ + 6O₂, what does C₆H₁₂O₆ represent?",
+            "options": ["Glucose", "Carbon dioxide", "Water", "Chlorophyll"],
+            "correctAnswer": "Glucose",
+            "hint": "This is the food that plants make — a type of sugar.",
+            "explanation": "C₆H₁₂O₆ is the chemical formula for glucose, the sugar produced by photosynthesis."
+          },
+          {
+            "questionId": "s1-m5",
+            "type": "match",
+            "difficulty": "medium",
+            "question": "Match each term to its correct description.",
+            "pairs": [
+              {"left": "Chlorophyll", "right": "Green pigment that absorbs light"},
+              {"left": "Stomata", "right": "Tiny pores for gas exchange"},
+              {"left": "Glucose", "right": "Sugar produced by photosynthesis"},
+              {"left": "Chloroplast", "right": "Organelle where photosynthesis occurs"}
+            ],
+            "correctAnswer": "Chlorophyll=Green pigment that absorbs light,Stomata=Tiny pores for gas exchange,Glucose=Sugar produced by photosynthesis,Chloroplast=Organelle where photosynthesis occurs",
+            "hint": "Think about the role each part plays in photosynthesis.",
+            "explanation": "Each structure has a specific role: chlorophyll captures light, stomata allow gas exchange, glucose is the product, and chloroplasts are the site."
+          }
+        ],
+        "hard": [
+          {
+            "questionId": "s1-h1",
+            "type": "scenario",
+            "difficulty": "hard",
+            "scenarioParagraph": "A scientist covers the leaves of a plant with aluminium foil while leaving the stem and roots exposed to light. After a week, she tests the covered leaves for starch (which plants make from glucose) using iodine solution. The covered leaves show no colour change with iodine, but uncovered leaves turn blue-black.",
+            "question": "What does this experiment prove about photosynthesis, and which variable was being tested?",
+            "options": [
+              "Light is required for photosynthesis; the variable is light availability",
+              "Water is required for photosynthesis; the variable is water supply",
+              "Chlorophyll is required; the variable is leaf colour",
+              "CO₂ is required; the variable is gas concentration"
+            ],
+            "correctAnswer": "Light is required for photosynthesis; the variable is light availability",
+            "hint": "The foil blocks something that the plant needs — what does foil block?",
+            "explanation": "Aluminium foil blocks light. Covered leaves made no starch because without light, photosynthesis cannot occur. This proves light is essential."
+          },
+          {
+            "questionId": "s1-h2",
+            "type": "explain",
+            "difficulty": "hard",
+            "question": "If chlorophyll absorbs red and blue light but reflects green light, why does increasing the proportion of green light in a growth lamp NOT increase plant growth?",
+            "correctAnswer": "green light is reflected not absorbed",
+            "hint": "Think about what 'reflecting green light' means for energy absorption.",
+            "explanation": "Plants appear green because chlorophyll reflects green light rather than absorbing it. Green light cannot power photosynthesis, so more green light doesn't increase food production."
+          },
+          {
+            "questionId": "s1-h3",
+            "type": "mcq",
+            "difficulty": "hard",
+            "question": "A plant is placed in a sealed container with enough water but with CO₂ removed from the air. What will happen and why?",
+            "options": [
+              "Photosynthesis stops because CO₂ is a raw material; plant will die",
+              "Photosynthesis continues using stored CO₂ in the soil",
+              "Photosynthesis rate doubles because there is more oxygen available",
+              "The plant switches to consuming glucose from its roots"
+            ],
+            "correctAnswer": "Photosynthesis stops because CO₂ is a raw material; plant will die",
+            "hint": "CO₂ is on the left side of the photosynthesis equation.",
+            "explanation": "CO₂ is an essential reactant. Without it, the plant cannot produce glucose, photosynthesis stops, and the plant eventually starves."
+          },
+          {
+            "questionId": "s1-h4",
+            "type": "fill_blank",
+            "difficulty": "hard",
+            "question": "The reason most deep-sea plants are red rather than green is that red pigments absorb ___ light, which penetrates deeper into ocean water than other wavelengths.",
+            "correctAnswer": "blue",
+            "hint": "Blue light has shorter wavelength and penetrates water better. Red pigments absorb what's available at depth.",
+            "explanation": "Blue light penetrates deepest into ocean water. Deep-sea plants have red pigments that absorb blue light, since red light is absorbed by surface water."
+          }
+        ]
+      }
+    },
+    {
+      "sectionId": "section-2",
+      "title": "Raw Materials and Products",
+      "content": "Photosynthesis requires two raw materials: carbon dioxide (CO₂) and water (H₂O). Let's trace where each comes from and what happens to the products.\n\n**Carbon Dioxide**\nCarbon dioxide makes up about 0.04% of the air we breathe. Plants absorb it through microscopic pores called stomata, which are mostly found on the underside of leaves. Each leaf has thousands of stomata. Guard cells around each stoma control when it opens and closes — they open during the day (when photosynthesis needs CO₂) and close at night to prevent water loss.\n\n**Water**\nPlants absorb water through their root hair cells, which have a large surface area to maximise absorption. Water travels up the stem through tubes called xylem vessels to reach the leaves.\n\n**Glucose (Product 1)**\nGlucose is the primary product of photosynthesis. The plant uses glucose in several ways:\n- Energy: Glucose is broken down in respiration to release energy for all cell activities\n- Storage: Converted to starch for long-term storage (starch is insoluble and stays inside the plant)\n- Growth: Converted to cellulose to build new cell walls\n- Transport: Converted to sucrose for transport through phloem vessels\n\n**Oxygen (Product 2)**\nOxygen is a byproduct of photosynthesis — it is released when water molecules are split apart by light energy. This process is called photolysis. The oxygen exits through stomata into the atmosphere. Every breath you take contains oxygen produced by photosynthesis.",
+      "keyConcepts": ["stomata", "guard cells", "xylem", "glucose uses", "photolysis"],
+      "wordCount": 250,
+      "assessments": {
+        "easy": [
+          {
+            "questionId": "s2-e1",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "How does carbon dioxide get into a leaf?",
+            "options": ["Through stomata (tiny pores)", "Through the roots", "Through the stem", "Through the flower"],
+            "correctAnswer": "Through stomata (tiny pores)",
+            "hint": "Look for the word 'pores' in the section.",
+            "explanation": "CO₂ enters leaves through stomata, microscopic pores found mainly on the underside of leaves."
+          },
+          {
+            "questionId": "s2-e2",
+            "type": "fill_blank",
+            "difficulty": "easy",
+            "question": "Plants absorb water from the soil through ___ cells in their roots.",
+            "correctAnswer": "root hair",
+            "hint": "These cells have a large surface area and are found at the tips of roots.",
+            "explanation": "Root hair cells have a large surface area to maximise water absorption from the soil."
+          },
+          {
+            "questionId": "s2-e3",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "What do plants do with the glucose made during photosynthesis?",
+            "options": ["Use it for energy, storage, and growth", "Release it all into the air", "Send it to the roots only", "Use it only for making seeds"],
+            "correctAnswer": "Use it for energy, storage, and growth",
+            "hint": "The section lists several uses of glucose — pick the most complete answer.",
+            "explanation": "Plants use glucose for respiration (energy), convert it to starch for storage, and to cellulose for growth."
+          },
+          {
+            "questionId": "s2-e4",
+            "type": "explain",
+            "difficulty": "easy",
+            "question": "Why do plants store glucose as starch rather than keeping it as glucose?",
+            "correctAnswer": "starch is insoluble so it stays inside the plant",
+            "hint": "The section says starch is 'insoluble' — what does that mean for storage?",
+            "explanation": "Starch is insoluble in water, so it stays inside the plant and doesn't dissolve out. Glucose is soluble and would diffuse away."
+          }
+        ],
+        "medium": [
+          {
+            "questionId": "s2-m1",
+            "type": "mcq",
+            "difficulty": "medium",
+            "question": "Guard cells control the opening and closing of stomata. When would stomata typically CLOSE?",
+            "options": ["At night, to prevent water loss", "At midday, when sunlight is strongest", "In spring, when growth begins", "After rainfall"],
+            "correctAnswer": "At night, to prevent water loss",
+            "hint": "Stomata open when photosynthesis needs CO₂. When is CO₂ not needed?",
+            "explanation": "At night there is no light, so photosynthesis stops. Stomata close to prevent the plant losing water through transpiration."
+          },
+          {
+            "questionId": "s2-m2",
+            "type": "explain",
+            "difficulty": "medium",
+            "question": "Explain the journey of a water molecule from the soil to becoming part of the photosynthesis reaction in a leaf.",
+            "correctAnswer": "root hairs absorb water, xylem carries it up, leaf uses it for photosynthesis",
+            "hint": "Trace the path: soil → roots → stem → leaf.",
+            "explanation": "Water is absorbed by root hair cells, transported up the stem through xylem vessels, and reaches the leaf cells where it is used in photosynthesis."
+          },
+          {
+            "questionId": "s2-m3",
+            "type": "fill_blank",
+            "difficulty": "medium",
+            "question": "The process where water molecules are split by light energy during photosynthesis is called ___.",
+            "correctAnswer": "photolysis",
+            "hint": "'Photo' = light, 'lysis' = splitting.",
+            "explanation": "Photolysis is the splitting of water molecules using light energy, releasing oxygen as a byproduct."
+          },
+          {
+            "questionId": "s2-m4",
+            "type": "match",
+            "difficulty": "medium",
+            "question": "Match each substance to its role in photosynthesis.",
+            "pairs": [
+              {"left": "CO₂", "right": "Raw material from air"},
+              {"left": "H₂O", "right": "Raw material from soil"},
+              {"left": "O₂", "right": "Byproduct released to air"},
+              {"left": "C₆H₁₂O₆", "right": "Food produced and stored"}
+            ],
+            "correctAnswer": "CO₂=Raw material from air,H₂O=Raw material from soil,O₂=Byproduct released to air,C₆H₁₂O₆=Food produced and stored",
+            "hint": "Think about what goes IN and what comes OUT of photosynthesis.",
+            "explanation": "CO₂ and H₂O are inputs (raw materials); O₂ and glucose are outputs (products)."
+          },
+          {
+            "questionId": "s2-m5",
+            "type": "mcq",
+            "difficulty": "medium",
+            "question": "Which vessel transports water from roots to leaves?",
+            "options": ["Xylem", "Phloem", "Stomata", "Guard cells"],
+            "correctAnswer": "Xylem",
+            "hint": "Xylem and phloem are the two transport vessels in plants — one for water, one for food.",
+            "explanation": "Xylem vessels transport water (and dissolved minerals) from roots upward to leaves. Phloem transports dissolved sugars."
+          }
+        ],
+        "hard": [
+          {
+            "questionId": "s2-h1",
+            "type": "scenario",
+            "difficulty": "hard",
+            "scenarioParagraph": "On a hot, dry day, a plant closes its stomata to prevent water loss. However, this also prevents CO₂ from entering the leaf.",
+            "question": "What is the trade-off the plant faces, and what would happen to its photosynthesis rate when stomata are closed?",
+            "options": [
+              "Photosynthesis slows because CO₂ cannot enter, but the plant conserves water",
+              "Photosynthesis speeds up because less water is wasted",
+              "Photosynthesis is unaffected because CO₂ is stored in the leaf",
+              "The plant switches to absorbing CO₂ through its roots"
+            ],
+            "correctAnswer": "Photosynthesis slows because CO₂ cannot enter, but the plant conserves water",
+            "hint": "Closed stomata block gas exchange — which gas is needed for photosynthesis?",
+            "explanation": "Closing stomata conserves water but cuts off CO₂ supply, so photosynthesis slows. This is the survival trade-off plants make on hot days."
+          },
+          {
+            "questionId": "s2-h2",
+            "type": "explain",
+            "difficulty": "hard",
+            "question": "A plant produces glucose by photosynthesis. Explain TWO different ways this glucose is used, giving the purpose of each.",
+            "correctAnswer": "respiration for energy and starch for storage",
+            "hint": "The section lists four uses — pick any two and explain why.",
+            "explanation": "1) Glucose is used in respiration to release energy for cell activities. 2) It is converted to starch for long-term insoluble storage inside the plant."
+          },
+          {
+            "questionId": "s2-h3",
+            "type": "fill_blank",
+            "difficulty": "hard",
+            "question": "Glucose is converted to ___ for transport through phloem vessels, because this form is more stable for long-distance movement.",
+            "correctAnswer": "sucrose",
+            "hint": "Sucrose is a common disaccharide — table sugar is mostly sucrose.",
+            "explanation": "Plants convert glucose to sucrose for phloem transport because sucrose is more chemically stable and less reactive than glucose."
+          },
+          {
+            "questionId": "s2-h4",
+            "type": "mcq",
+            "difficulty": "hard",
+            "question": "If you injected a radioactive carbon isotope (¹⁴C) into the CO₂ surrounding a leaf, where would you expect to find radioactive carbon atoms 24 hours later?",
+            "options": [
+              "In the glucose and starch stored in the leaf",
+              "Only in the oxygen released by the leaf",
+              "Only in the water absorbed by the roots",
+              "In the chlorophyll molecule only"
+            ],
+            "correctAnswer": "In the glucose and starch stored in the leaf",
+            "hint": "CO₂ becomes part of glucose — follow the carbon atom through the equation.",
+            "explanation": "The carbon in CO₂ is incorporated into glucose (C₆H₁₂O₆) during photosynthesis. After 24 hours some glucose would be converted to starch, so ¹⁴C would appear in both."
+          }
+        ]
+      }
+    },
+    {
+      "sectionId": "section-3",
+      "title": "Factors Affecting Photosynthesis",
+      "content": "The rate of photosynthesis is not constant — it depends on several environmental factors. Understanding these factors helps farmers, gardeners, and scientists maximise plant growth.\n\n**1. Light Intensity**\nAs light intensity increases, the rate of photosynthesis increases — up to a point. Eventually, even very bright light cannot increase the rate further because other factors become limiting. This is called the light saturation point.\n\n**2. Carbon Dioxide Concentration**\nCO₂ is a raw material for photosynthesis. When CO₂ levels are low (like normal air at 0.04%), it limits how fast photosynthesis can proceed. Increasing CO₂ concentration (e.g., in a greenhouse) speeds up photosynthesis significantly — which is why commercial greenhouses often pump in extra CO₂.\n\n**3. Temperature**\nPhotosynthesis involves enzymes (biological catalysts). Like all enzymes, these work best at an optimum temperature (around 25–30°C for most plants). Below this, reactions are too slow. Above 40°C, the enzymes denature (lose their shape) and stop working permanently.\n\n**4. Water Availability**\nWater is a raw material for photosynthesis. Severe water shortage causes stomata to close (to prevent water loss), which cuts off CO₂ supply and slows photosynthesis drastically.\n\n**Limiting Factors**\nAt any moment, the factor that is in shortest supply controls the rate of photosynthesis — this is called the limiting factor. Even if you increase light intensity, if CO₂ is the limiting factor, the rate won't improve until CO₂ is also increased.",
+      "keyConcepts": ["limiting factors", "light intensity", "CO2 concentration", "temperature", "enzyme denaturation"],
+      "wordCount": 268,
+      "assessments": {
+        "easy": [
+          {
+            "questionId": "s3-e1",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "Which of the following is NOT a factor that affects the rate of photosynthesis?",
+            "options": ["Soil colour", "Light intensity", "CO₂ concentration", "Temperature"],
+            "correctAnswer": "Soil colour",
+            "hint": "The section lists four factors — which one isn't mentioned?",
+            "explanation": "Soil colour does not affect photosynthesis. The key factors are light, CO₂, temperature, and water."
+          },
+          {
+            "questionId": "s3-e2",
+            "type": "fill_blank",
+            "difficulty": "easy",
+            "question": "The factor in shortest supply that controls the rate of photosynthesis is called the ___ factor.",
+            "correctAnswer": "limiting",
+            "hint": "The section has a heading called '__ Factors'.",
+            "explanation": "The limiting factor is the factor in shortest supply — it controls the overall rate of photosynthesis."
+          },
+          {
+            "questionId": "s3-e3",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "Why do commercial greenhouses often pump extra CO₂ into the air?",
+            "options": ["To speed up photosynthesis and grow more plants faster", "To keep the temperature warm", "To kill insects that eat plants", "To replace oxygen that plants use up"],
+            "correctAnswer": "To speed up photosynthesis and grow more plants faster",
+            "hint": "CO₂ is a raw material — more raw material means...",
+            "explanation": "Higher CO₂ concentration increases the rate of photosynthesis, leading to faster plant growth and higher crop yields."
+          },
+          {
+            "questionId": "s3-e4",
+            "type": "explain",
+            "difficulty": "easy",
+            "question": "Explain why a plant in a very hot room (above 40°C) would stop photosynthesising even if it has plenty of light and water.",
+            "correctAnswer": "enzymes denature at high temperature",
+            "hint": "The section mentions 'enzymes' and what happens to them above 40°C.",
+            "explanation": "Above 40°C, the enzymes that control photosynthesis denature — they lose their shape and stop working, halting photosynthesis."
+          }
+        ],
+        "medium": [
+          {
+            "questionId": "s3-m1",
+            "type": "mcq",
+            "difficulty": "medium",
+            "question": "A plant is given bright light and plenty of water but is kept at 5°C. Why is its photosynthesis rate very slow?",
+            "options": [
+              "Low temperature slows enzyme activity, reducing the reaction rate",
+              "Cold temperature prevents water from reaching the leaves",
+              "Cold air contains less CO₂ than warm air",
+              "Chlorophyll cannot absorb light at low temperatures"
+            ],
+            "correctAnswer": "Low temperature slows enzyme activity, reducing the reaction rate",
+            "hint": "Think about what happens to enzymes in cold conditions.",
+            "explanation": "At low temperatures, enzyme molecules have less kinetic energy and collide less frequently, so reactions proceed slowly."
+          },
+          {
+            "questionId": "s3-m2",
+            "type": "explain",
+            "difficulty": "medium",
+            "question": "A scientist shines increasingly bright light on a plant and measures the rate of photosynthesis. After a certain point, making the light brighter has no effect. Why?",
+            "correctAnswer": "another factor like CO2 has become limiting",
+            "hint": "The section mentions 'light saturation point' — what does that mean?",
+            "explanation": "The plant reaches its light saturation point. After this, another factor (like CO₂ concentration or temperature) becomes the limiting factor, so more light makes no difference."
+          },
+          {
+            "questionId": "s3-m3",
+            "type": "match",
+            "difficulty": "medium",
+            "question": "Match each condition to its effect on photosynthesis rate.",
+            "pairs": [
+              {"left": "Temperature above 40°C", "right": "Rate drops to zero (enzyme denaturation)"},
+              {"left": "Increased CO₂ in greenhouse", "right": "Rate increases"},
+              {"left": "Stomata close on hot day", "right": "Rate falls (CO₂ cut off)"},
+              {"left": "Light saturation reached", "right": "More light has no effect"}
+            ],
+            "correctAnswer": "Temperature above 40°C=Rate drops to zero (enzyme denaturation),Increased CO₂ in greenhouse=Rate increases,Stomata close on hot day=Rate falls (CO₂ cut off),Light saturation reached=More light has no effect",
+            "hint": "Think about what each condition changes in the photosynthesis process.",
+            "explanation": "Each condition affects a different part of the process: temperature affects enzymes, CO₂ affects raw material supply, stomata control gas entry, and light saturation marks where another factor limits."
+          },
+          {
+            "questionId": "s3-m4",
+            "type": "fill_blank",
+            "difficulty": "medium",
+            "question": "Enzymes involved in photosynthesis work best at their ___ temperature, which is around 25–30°C for most plants.",
+            "correctAnswer": "optimum",
+            "hint": "This is the 'best' or 'ideal' temperature for enzyme function.",
+            "explanation": "The optimum temperature is where enzymes work most efficiently. Above or below this, the rate of photosynthesis decreases."
+          },
+          {
+            "questionId": "s3-m5",
+            "type": "scenario",
+            "difficulty": "medium",
+            "scenarioParagraph": "A farmer wants to increase the yield of his greenhouse tomatoes. He increases the light intensity and raises the temperature to 28°C but sees only a small improvement in growth.",
+            "question": "What is most likely the current limiting factor, and what should the farmer do next?",
+            "options": [
+              "CO₂ concentration is limiting; he should increase CO₂ levels in the greenhouse",
+              "Water is limiting; he should water the plants more",
+              "Temperature is too low; he should raise it above 40°C",
+              "Light intensity is still limiting; he should add even more lamps"
+            ],
+            "correctAnswer": "CO₂ concentration is limiting; he should increase CO₂ levels in the greenhouse",
+            "hint": "Light and temperature are already optimised — what other factor affects photosynthesis?",
+            "explanation": "With light and temperature addressed, CO₂ (normally just 0.04% of air) becomes the bottleneck. Adding CO₂ to the greenhouse would increase photosynthesis rate."
+          }
+        ],
+        "hard": [
+          {
+            "questionId": "s3-h1",
+            "type": "explain",
+            "difficulty": "hard",
+            "question": "Explain why increasing CO₂ concentration increases photosynthesis rate at low light but has almost no effect at high light intensity.",
+            "correctAnswer": "at low light, light is limiting not CO2; at high light CO2 becomes limiting",
+            "hint": "Think about which factor is in shortest supply in each situation.",
+            "explanation": "At low light, light is the limiting factor — adding CO₂ doesn't help because the plant can't use it without more light energy. At high light, light is no longer limiting, so CO₂ becomes the bottleneck, and increasing it raises the rate."
+          },
+          {
+            "questionId": "s3-h2",
+            "type": "mcq",
+            "difficulty": "hard",
+            "question": "A plant's photosynthesis rate is measured in low CO₂ conditions at 20°C. The scientist then doubles the CO₂ AND raises temperature to 30°C simultaneously. Which statement best predicts the outcome?",
+            "options": [
+              "Rate increases significantly because both limiting factors improved simultaneously",
+              "Rate stays the same because you cannot change two variables at once",
+              "Rate decreases because higher temperature denatures enzymes",
+              "Rate increases slightly because only temperature matters"
+            ],
+            "correctAnswer": "Rate increases significantly because both limiting factors improved simultaneously",
+            "hint": "Both CO₂ and temperature were below optimal — removing two limits at once should have a compounded effect.",
+            "explanation": "Removing multiple limiting factors simultaneously causes a multiplicative increase in rate. Both more CO₂ (raw material) and higher temperature (faster enzyme reactions) raise photosynthesis rate together."
+          },
+          {
+            "questionId": "s3-h3",
+            "type": "fill_blank",
+            "difficulty": "hard",
+            "question": "At temperatures above the optimum, photosynthesis rate falls because enzymes ___, permanently losing their active site shape.",
+            "correctAnswer": "denature",
+            "hint": "This is an irreversible change to enzyme structure caused by heat.",
+            "explanation": "Denaturation is the irreversible unfolding of enzyme proteins caused by excessive heat, destroying the active site."
+          },
+          {
+            "questionId": "s3-h4",
+            "type": "scenario",
+            "difficulty": "hard",
+            "scenarioParagraph": "Plant A is kept in bright light at 25°C with 0.04% CO₂ (normal air). Plant B is kept in the same light and temperature but with 0.4% CO₂ (10x normal). After a month, Plant B is significantly larger.",
+            "question": "Which conclusion is best supported by this experiment, and what controls were maintained?",
+            "options": [
+              "Higher CO₂ concentration increases photosynthesis rate; light and temperature were controlled",
+              "Higher temperature causes faster growth; CO₂ and light were controlled",
+              "Bright light is the main driver of growth; CO₂ was the independent variable",
+              "Plant B grew larger because it was watered more"
+            ],
+            "correctAnswer": "Higher CO₂ concentration increases photosynthesis rate; light and temperature were controlled",
+            "hint": "In a controlled experiment, only one variable is changed — identify what was different between the two plants.",
+            "explanation": "Only CO₂ concentration differed between the plants. Light and temperature were controlled (same for both). Plant B's greater size shows CO₂ is a limiting factor in normal air."
+          }
+        ]
+      }
+    },
+    {
+      "sectionId": "section-4",
+      "title": "Photosynthesis and Respiration",
+      "content": "Plants both photosynthesise and respire — and it is important not to confuse these two processes.\n\n**Respiration** happens in ALL living cells, ALL the time (day and night). In respiration, glucose is broken down using oxygen to release energy:\n\nC₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + Energy\n\nNotice that respiration is the exact opposite of photosynthesis.\n\n**During the day:** Plants photosynthesise faster than they respire. This means they take in more CO₂ than they release, and they release more O₂ than they consume. Net result: CO₂ absorbed, O₂ released.\n\n**At night:** Plants cannot photosynthesise (no light). They still respire, so they release CO₂ and consume O₂ — just like animals.\n\n**The Compensation Point**\nThere is a light intensity at which the rate of photosynthesis exactly equals the rate of respiration. At this point, no net gas exchange occurs. This is the compensation point. Above this light level, plants gain organic matter (grow). Below it (including night), they consume their stored glucose.\n\n**Why this matters:**\n- Forest canopies: Shade-tolerant plants have a low compensation point (they can photosynthesise at low light).\n- Indoor plants: Some thrive in dim rooms because they have low compensation points.\n- Aquatic plants in deep water: They may receive so little light that they cannot reach their compensation point and eventually die.\n\n**Do plants compete with humans for oxygen at night?**\nA common misconception. While plants do release CO₂ at night, the amount is tiny compared to what they produce during the day. Over a 24-hour period, plants are net producers of oxygen.",
+      "keyConcepts": ["respiration", "compensation point", "net gas exchange", "day vs night", "glucose breakdown"],
+      "wordCount": 280,
+      "assessments": {
+        "easy": [
+          {
+            "questionId": "s4-e1",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "When do plants respire?",
+            "options": ["All the time, day and night", "Only during the day", "Only at night", "Only when they are growing"],
+            "correctAnswer": "All the time, day and night",
+            "hint": "The section says respiration happens in 'all living cells, all the time'.",
+            "explanation": "Plants (like all living organisms) respire 24 hours a day to release energy from glucose."
+          },
+          {
+            "questionId": "s4-e2",
+            "type": "fill_blank",
+            "difficulty": "easy",
+            "question": "At night, plants release ___ and absorb ___ because they can only respire, not photosynthesise.",
+            "correctAnswer": "CO₂, O₂",
+            "hint": "Look at the respiration equation — what are the products?",
+            "explanation": "At night, without light, only respiration occurs: plants break down glucose using O₂ and release CO₂."
+          },
+          {
+            "questionId": "s4-e3",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "What happens at the compensation point?",
+            "options": ["Rate of photosynthesis equals rate of respiration", "Plants stop growing", "Plants absorb maximum CO₂", "Enzymes stop working"],
+            "correctAnswer": "Rate of photosynthesis equals rate of respiration",
+            "hint": "At the compensation point, the two processes exactly balance each other.",
+            "explanation": "At the compensation point, all the O₂ produced by photosynthesis is used up in respiration and vice versa — no net gas exchange."
+          },
+          {
+            "questionId": "s4-e4",
+            "type": "explain",
+            "difficulty": "easy",
+            "question": "A friend says 'plants are dangerous at night because they use up oxygen'. Is this correct? Explain.",
+            "correctAnswer": "no, plants produce much more oxygen during the day than they consume at night",
+            "hint": "Think about the compensation point and net oxygen production over 24 hours.",
+            "explanation": "This is a misconception. While plants do consume a little O₂ at night, over 24 hours they are net producers of oxygen. The amount of O₂ released during the day is far greater than what is used at night."
+          }
+        ],
+        "medium": [
+          {
+            "questionId": "s4-m1",
+            "type": "match",
+            "difficulty": "medium",
+            "question": "Match each condition to what the plant does with gases.",
+            "pairs": [
+              {"left": "Bright daylight", "right": "Absorbs CO₂, releases O₂ (net)"},
+              {"left": "Night", "right": "Releases CO₂, absorbs O₂"},
+              {"left": "Compensation point", "right": "No net gas exchange"},
+              {"left": "Dim light below compensation point", "right": "Net CO₂ release"}
+            ],
+            "correctAnswer": "Bright daylight=Absorbs CO₂, releases O₂ (net),Night=Releases CO₂, absorbs O₂,Compensation point=No net gas exchange,Dim light below compensation point=Net CO₂ release",
+            "hint": "Above compensation point: photosynthesis wins. Below: respiration wins.",
+            "explanation": "The balance between photosynthesis and respiration determines the net gas exchange at different light levels."
+          },
+          {
+            "questionId": "s4-m2",
+            "type": "explain",
+            "difficulty": "medium",
+            "question": "Compare photosynthesis and respiration — how are they opposite processes?",
+            "correctAnswer": "photosynthesis uses CO2 and water to make glucose and O2; respiration uses glucose and O2 to make CO2 and water",
+            "hint": "Write both equations side by side and compare the reactants and products.",
+            "explanation": "Photosynthesis: CO₂ + H₂O → Glucose + O₂. Respiration: Glucose + O₂ → CO₂ + H₂O. They are exact chemical reverses of each other."
+          },
+          {
+            "questionId": "s4-m3",
+            "type": "mcq",
+            "difficulty": "medium",
+            "question": "A shade-tolerant plant has a very low compensation point. What does this mean for its survival?",
+            "options": [
+              "It can grow in dim light where other plants cannot survive",
+              "It needs bright sunlight to grow",
+              "It produces more oxygen than sun-loving plants",
+              "It stops photosynthesising in direct sunlight"
+            ],
+            "correctAnswer": "It can grow in dim light where other plants cannot survive",
+            "hint": "Low compensation point = photosynthesis matches respiration at very low light levels.",
+            "explanation": "A low compensation point means the plant achieves net photosynthesis (growth) at much lower light intensities, allowing it to thrive under forest canopies."
+          },
+          {
+            "questionId": "s4-m4",
+            "type": "fill_blank",
+            "difficulty": "medium",
+            "question": "Over a full 24-hour period, plants are net ___ of oxygen, because daytime photosynthesis produces far more than nighttime respiration consumes.",
+            "correctAnswer": "producers",
+            "hint": "Net means the overall balance — what wins over 24 hours?",
+            "explanation": "While plants consume some O₂ at night, the large amount produced during daytime photosynthesis makes them net oxygen producers overall."
+          },
+          {
+            "questionId": "s4-m5",
+            "type": "scenario",
+            "difficulty": "medium",
+            "scenarioParagraph": "An aquatic plant is placed at increasing depths in a lake. A scientist measures bubbles of gas (O₂) coming off the plant at each depth. Near the surface there are many bubbles; at 5m there are few bubbles; at 8m there are none.",
+            "question": "What most likely happens to the plant at 8m depth in the long run?",
+            "options": [
+              "It dies because it cannot reach its compensation point",
+              "It adapts by growing larger leaves",
+              "It switches to absorbing glucose from the water",
+              "It thrives because pressure helps photosynthesis"
+            ],
+            "correctAnswer": "It dies because it cannot reach its compensation point",
+            "hint": "No bubbles = no net photosynthesis. What does that mean for the plant's energy balance?",
+            "explanation": "At 8m, light intensity is too low for photosynthesis to even equal respiration. The plant consumes its stored glucose without replacing it and eventually starves."
+          }
+        ],
+        "hard": [
+          {
+            "questionId": "s4-h1",
+            "type": "explain",
+            "difficulty": "hard",
+            "question": "A plant produces 20 units of O₂ per hour by photosynthesis but consumes 5 units per hour by respiration. What is the net O₂ produced per hour? At night, with respiration at 5 units/hour, how many hours until 60 units of O₂ deficit accumulates?",
+            "correctAnswer": "15 units per hour net during day; 12 hours at night for 60 unit deficit",
+            "hint": "Net = produced - consumed. For night deficit: 60 ÷ 5 = 12.",
+            "explanation": "Net daytime O₂ = 20 - 5 = 15 units/hr. At night, 5 units are consumed per hour; 60 ÷ 5 = 12 hours to accumulate a 60-unit deficit."
+          },
+          {
+            "questionId": "s4-h2",
+            "type": "mcq",
+            "difficulty": "hard",
+            "question": "If a plant's respiration rate is 4 units/hr and its photosynthesis rate at full sunlight is 20 units/hr, what fraction of the day must it be in sunlight to have positive net growth?",
+            "options": [
+              "Any sunlight hours > 0, since photosynthesis always exceeds respiration per hour",
+              "At least 24% of the day in sunlight",
+              "Exactly 50% of the day",
+              "It cannot grow because respiration runs all night"
+            ],
+            "correctAnswer": "Any sunlight hours > 0, since photosynthesis always exceeds respiration per hour",
+            "hint": "Each sunlit hour gives 20 units made but only 4 consumed. Even 1 hour of sun creates surplus.",
+            "explanation": "Each sunlit hour produces 20 - 4 = 16 units net. Each dark hour costs 4 units. As long as sunlit hours × 16 > dark hours × 4, the plant has positive net growth. With 24h/20 units sunlit = 4.8 dark hours covered, even a few hours of light is profitable."
+          },
+          {
+            "questionId": "s4-h3",
+            "type": "fill_blank",
+            "difficulty": "hard",
+            "question": "The point at which a plant's photosynthesis rate first exceeds its respiration rate as light increases is the ___ point.",
+            "correctAnswer": "compensation",
+            "hint": "This is where the plant 'compensates' for its respiratory costs with photosynthetic gains.",
+            "explanation": "The compensation point is the light intensity at which gross photosynthesis equals respiration, so net gas exchange is zero."
+          },
+          {
+            "questionId": "s4-h4",
+            "type": "scenario",
+            "difficulty": "hard",
+            "scenarioParagraph": "Two plant species live in the same forest. Species A (sun plant) has a compensation point of 800 lux and grows rapidly in the canopy. Species B (shade plant) has a compensation point of 50 lux and grows on the forest floor.",
+            "question": "If the forest canopy lets through only 100 lux to the floor, which species will thrive on the forest floor and why?",
+            "options": [
+              "Species B, because 100 lux exceeds its compensation point of 50 lux, allowing net photosynthesis",
+              "Species A, because it is adapted to bright sunlight",
+              "Neither species, because 100 lux is too low for photosynthesis",
+              "Both equally, because both will adapt to 100 lux over time"
+            ],
+            "correctAnswer": "Species B, because 100 lux exceeds its compensation point of 50 lux, allowing net photosynthesis",
+            "hint": "Compare 100 lux to each species' compensation point — which one can achieve net growth at 100 lux?",
+            "explanation": "At 100 lux, Species B (compensation at 50 lux) achieves net photosynthesis and grows. Species A (compensation at 800 lux) cannot even meet its own respiratory costs at 100 lux and would die."
+          }
+        ]
+      }
+    },
+    {
+      "sectionId": "section-5",
+      "title": "Importance of Photosynthesis",
+      "content": "Photosynthesis is arguably the most important chemical process on Earth. Here's why:\n\n**1. Foundation of All Food Chains**\nAll food energy on Earth originally comes from the Sun, captured by photosynthesis. Plants (and other photosynthesisers) are called producers. Every animal — from insects to blue whales to humans — ultimately depends on plants for food, either by eating plants directly or by eating animals that eat plants.\n\n**2. Oxygen Production**\nThe oxygen in Earth's atmosphere was almost entirely produced by billions of years of photosynthesis. Before photosynthetic organisms evolved (about 2.7 billion years ago), Earth's atmosphere had almost no free oxygen. The 'Great Oxidation Event' changed everything — and made complex animal life possible.\n\n**3. Carbon Dioxide Regulation**\nPlants are a crucial part of the carbon cycle. They absorb CO₂ from the atmosphere, locking the carbon into organic compounds (wood, leaves, roots). Forests are called 'carbon sinks' because they remove large amounts of CO₂ from the air. Deforestation releases this stored carbon, contributing to climate change.\n\n**4. Fossil Fuels**\nCoal, oil, and natural gas are the remains of ancient plants and organisms that photosynthesised millions of years ago. When we burn fossil fuels, we are releasing carbon that was captured from the atmosphere long ago — which is why fossil fuel burning increases atmospheric CO₂.\n\n**5. Agriculture and Food Security**\nAll crop production depends on photosynthesis. Understanding and optimising photosynthesis is key to growing enough food for the world's growing population.",
+      "keyConcepts": ["food chains", "carbon sink", "Great Oxidation Event", "fossil fuels", "carbon cycle"],
+      "wordCount": 270,
+      "assessments": {
+        "easy": [
+          {
+            "questionId": "s5-e1",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "Why are plants called 'producers' in a food chain?",
+            "options": ["They produce food from sunlight using photosynthesis", "They produce oxygen for animals to breathe", "They produce seeds for new plants", "They produce more plants than any other organism"],
+            "correctAnswer": "They produce food from sunlight using photosynthesis",
+            "hint": "Think about what 'produce' means — what does a plant make that others cannot?",
+            "explanation": "Plants are called producers because they produce organic food (glucose) from inorganic raw materials (CO₂, H₂O) using sunlight."
+          },
+          {
+            "questionId": "s5-e2",
+            "type": "fill_blank",
+            "difficulty": "easy",
+            "question": "Forests are called carbon ___ because they absorb and store large amounts of CO₂ from the atmosphere.",
+            "correctAnswer": "sinks",
+            "hint": "A 'sink' absorbs something — like a drain sink absorbs water.",
+            "explanation": "Carbon sinks absorb more carbon than they release. Forests lock carbon into wood and organic material through photosynthesis."
+          },
+          {
+            "questionId": "s5-e3",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "What happens when we burn fossil fuels, in terms of photosynthesis?",
+            "options": ["We release CO₂ that was captured by ancient plants millions of years ago", "We create new oxygen for the atmosphere", "We help plants grow faster by adding nutrients", "We reverse the effects of the Great Oxidation Event"],
+            "correctAnswer": "We release CO₂ that was captured by ancient plants millions of years ago",
+            "hint": "Fossil fuels are the remains of ancient organisms that photosynthesised — burning them releases what?",
+            "explanation": "Burning fossil fuels releases carbon that was captured from the atmosphere by ancient photosynthesis and stored for millions of years, raising current CO₂ levels."
+          },
+          {
+            "questionId": "s5-e4",
+            "type": "explain",
+            "difficulty": "easy",
+            "question": "Explain in your own words why every animal on Earth ultimately depends on photosynthesis for food.",
+            "correctAnswer": "all food energy comes from plants which get energy from the sun through photosynthesis",
+            "hint": "Trace any food chain back to its start — what is always at the beginning?",
+            "explanation": "All food chains start with plants (producers). Even carnivores eat herbivores that eat plants. All the energy in food originally came from sunlight captured by photosynthesis."
+          }
+        ],
+        "medium": [
+          {
+            "questionId": "s5-m1",
+            "type": "explain",
+            "difficulty": "medium",
+            "question": "Explain why cutting down large areas of rainforest contributes to climate change.",
+            "correctAnswer": "deforestation releases stored carbon and reduces carbon absorption",
+            "hint": "Think about two effects: what forests store AND what they actively do.",
+            "explanation": "Forests store large amounts of carbon in wood and soil. When cut down and burned, this carbon is released as CO₂. Additionally, fewer trees means less CO₂ is absorbed from the atmosphere — a double impact on climate."
+          },
+          {
+            "questionId": "s5-m2",
+            "type": "mcq",
+            "difficulty": "medium",
+            "question": "The 'Great Oxidation Event' about 2.7 billion years ago dramatically changed Earth's atmosphere. What caused it?",
+            "options": [
+              "Evolution of photosynthetic organisms that released O₂ as a byproduct",
+              "Volcanic eruptions releasing massive amounts of oxygen",
+              "Solar wind stripping away CO₂ and leaving O₂",
+              "Large animals evolving and breathing out O₂"
+            ],
+            "correctAnswer": "Evolution of photosynthetic organisms that released O₂ as a byproduct",
+            "hint": "The section says Earth had almost no oxygen before photosynthesis evolved.",
+            "explanation": "Ancient cyanobacteria evolved photosynthesis and began releasing O₂ as a byproduct. Over hundreds of millions of years, this built up Earth's oxygen-rich atmosphere."
+          },
+          {
+            "questionId": "s5-m3",
+            "type": "match",
+            "difficulty": "medium",
+            "question": "Match each importance of photosynthesis to the correct description.",
+            "pairs": [
+              {"left": "Oxygen production", "right": "Built Earth's atmosphere over billions of years"},
+              {"left": "Carbon sink", "right": "Forests absorb CO₂, reducing greenhouse effect"},
+              {"left": "Food chains", "right": "All animal energy originates from plant photosynthesis"},
+              {"left": "Fossil fuels", "right": "Ancient photosynthesis stored today's coal and oil"}
+            ],
+            "correctAnswer": "Oxygen production=Built Earth's atmosphere over billions of years,Carbon sink=Forests absorb CO₂, reducing greenhouse effect,Food chains=All animal energy originates from plant photosynthesis,Fossil fuels=Ancient photosynthesis stored today's coal and oil",
+            "hint": "Each importance connects photosynthesis to a different aspect of life or the planet.",
+            "explanation": "Photosynthesis shaped Earth's atmosphere, regulates climate through carbon absorption, forms the base of all food webs, and created the fossil fuels we use for energy."
+          },
+          {
+            "questionId": "s5-m4",
+            "type": "fill_blank",
+            "difficulty": "medium",
+            "question": "Coal and oil are the compressed remains of ancient plants. When we burn them, we are essentially releasing ___ that was captured from the atmosphere millions of years ago.",
+            "correctAnswer": "carbon (or CO₂)",
+            "hint": "Photosynthesis captures carbon from CO₂ — burning reverses this.",
+            "explanation": "Burning fossil fuels releases ancient carbon stored by photosynthesis, adding CO₂ to today's atmosphere and contributing to the greenhouse effect."
+          },
+          {
+            "questionId": "s5-m5",
+            "type": "scenario",
+            "difficulty": "medium",
+            "scenarioParagraph": "Scientists are researching how to make photosynthesis more efficient in crop plants. Current photosynthesis converts only about 1% of sunlight energy into stored glucose in most crops.",
+            "question": "If researchers doubled the efficiency to 2%, what would be the most significant global benefit?",
+            "options": [
+              "Crops would grow twice as fast, potentially doubling food production for a growing population",
+              "Plants would release twice as much CO₂, speeding up the carbon cycle",
+              "The atmosphere would become 2% more oxygen-rich",
+              "Plants would need only half as much water"
+            ],
+            "correctAnswer": "Crops would grow twice as fast, potentially doubling food production for a growing population",
+            "hint": "More efficient photosynthesis = more glucose = more plant matter = more food.",
+            "explanation": "Doubling photosynthetic efficiency would dramatically increase crop yields, directly addressing global food security as the world's population grows."
+          }
+        ],
+        "hard": [
+          {
+            "questionId": "s5-h1",
+            "type": "explain",
+            "difficulty": "hard",
+            "question": "Some scientists propose planting vast forests to combat climate change. Explain TWO ways this would help and ONE limitation.",
+            "correctAnswer": "more trees absorb more CO2 and store carbon; limitation is land use competition with agriculture",
+            "hint": "Think about what forests do to CO₂ and carbon storage. What are forests competing with for land?",
+            "explanation": "1) Growing forests absorb CO₂ through photosynthesis. 2) Trees store carbon in wood for decades or centuries. Limitation: large-scale reforestation competes with agricultural land needed for food production."
+          },
+          {
+            "questionId": "s5-h2",
+            "type": "mcq",
+            "difficulty": "hard",
+            "question": "If all photosynthesis on Earth stopped tomorrow (hypothetically), which sequence of events would follow?",
+            "options": [
+              "O₂ depleted over time → animals die → CO₂ rises → planet heats → ocean chemistry changes",
+              "CO₂ depleted immediately → plants die → animals adapt → new organisms evolve",
+              "Fossil fuels replenish O₂ → life continues → temperature drops",
+              "Water levels rise → CO₂ dissolves → new ice age begins"
+            ],
+            "correctAnswer": "O₂ depleted over time → animals die → CO₂ rises → planet heats → ocean chemistry changes",
+            "hint": "Trace what photosynthesis currently provides: O₂, carbon absorption, food chains — what happens if these stop?",
+            "explanation": "Without photosynthesis: food chains collapse, O₂ is no longer replenished, CO₂ accumulates accelerating warming, ocean acidification from dissolved CO₂ — cascading catastrophic effects."
+          },
+          {
+            "questionId": "s5-h3",
+            "type": "fill_blank",
+            "difficulty": "hard",
+            "question": "Before photosynthetic organisms evolved, Earth's early atmosphere contained almost no ___ gas, making complex animal life impossible.",
+            "correctAnswer": "oxygen",
+            "hint": "The Great Oxidation Event is described in this section.",
+            "explanation": "Earth's original atmosphere was mostly nitrogen, CO₂, and methane with almost no free oxygen. Photosynthesis by cyanobacteria gradually built up atmospheric oxygen, enabling aerobic life."
+          },
+          {
+            "questionId": "s5-h4",
+            "type": "scenario",
+            "difficulty": "hard",
+            "scenarioParagraph": "A biotech company claims they have created 'super-efficient' crop plants that absorb 5x more CO₂ than normal plants. They propose growing these at industrial scale to reverse climate change.",
+            "question": "Which critical question should scientists ask about this proposal before accepting it?",
+            "options": [
+              "What happens to the extra carbon stored by the plants — is it permanently stored or released when plants die?",
+              "How many different colours do the plants come in?",
+              "Do the plants need less water than normal crops?",
+              "Will the plants grow faster in the summer than in winter?"
+            ],
+            "correctAnswer": "What happens to the extra carbon stored by the plants — is it permanently stored or released when plants die?",
+            "hint": "Carbon absorbed by plants isn't gone forever unless it is permanently stored — what happens to plants when they die?",
+            "explanation": "Plants store carbon temporarily. When they die and decompose, the carbon is released back as CO₂. For long-term climate benefit, the carbon must be permanently stored (e.g., as wood in long-lived trees, or converted to biochar)."
+          }
+        ]
+      }
+    }
+  ]
+}

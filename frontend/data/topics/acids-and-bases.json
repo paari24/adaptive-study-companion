@@ -1,0 +1,656 @@
+{
+  "topicId": "acids-and-bases",
+  "title": "Acids and Bases",
+  "subject": "Science",
+  "grade": "Class 7",
+  "sections": [
+    {
+      "sectionId": "section-1",
+      "title": "What are Acids and Bases?",
+      "content": "Acids and bases are two opposite types of chemicals that we encounter every day. Understanding them helps explain why lemon juice is sour, why soap feels slippery, and why our stomach can digest food.\n\n**Acids**\nAcids are substances that produce hydrogen ions (H⁺) when dissolved in water. They have the following properties:\n- Sour taste (like lemon juice, vinegar)\n- Turn blue litmus paper red\n- Have a pH below 7\n- React with metals to produce hydrogen gas\n- React with bases to form salt and water\n\nCommon examples: Hydrochloric acid (HCl) in stomach, sulphuric acid (H₂SO₄) in car batteries, citric acid in oranges, acetic acid in vinegar.\n\n**Bases**\nBases are substances that produce hydroxide ions (OH⁻) when dissolved in water. Their properties are opposite to acids:\n- Bitter taste and soapy feel\n- Turn red litmus paper blue\n- Have a pH above 7\n- React with acids to form salt and water (neutralisation)\n\nCommon examples: Sodium hydroxide (caustic soda), calcium hydroxide (lime water), ammonia (cleaning products), baking soda (sodium bicarbonate).\n\n**Alkalis** are bases that dissolve in water. All alkalis are bases, but not all bases are alkalis.\n\n**Neutral substances** have a pH of exactly 7. Pure water is neutral.",
+      "keyConcepts": ["acids", "bases", "pH scale", "litmus", "hydrogen ions", "hydroxide ions"],
+      "wordCount": 220,
+      "assessments": {
+        "easy": [
+          {
+            "questionId": "s1-e1",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "Which of the following is a property of acids?",
+            "options": ["Sour taste and turn blue litmus red", "Bitter taste and turn red litmus blue", "No taste and no effect on litmus", "Sweet taste and dissolve in oil"],
+            "correctAnswer": "Sour taste and turn blue litmus red",
+            "hint": "Think about the taste of lemon juice — is it sour or bitter?",
+            "explanation": "Acids are sour (like vinegar or lemon juice) and turn blue litmus paper red."
+          },
+          {
+            "questionId": "s1-e2",
+            "type": "fill_blank",
+            "difficulty": "easy",
+            "question": "Bases that dissolve in water are specifically called ___.",
+            "correctAnswer": "alkalis",
+            "hint": "The section says 'all ___ are bases, but not all bases are ___'.",
+            "explanation": "Alkalis are a subset of bases — they are bases that are soluble in water."
+          },
+          {
+            "questionId": "s1-e3",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "What is the pH of pure water?",
+            "options": ["7 (neutral)", "0 (strongly acidic)", "14 (strongly basic)", "5 (slightly acidic)"],
+            "correctAnswer": "7 (neutral)",
+            "hint": "The section says neutral substances have a pH of exactly ___.",
+            "explanation": "Pure water is neutral with a pH of exactly 7."
+          },
+          {
+            "questionId": "s1-e4",
+            "type": "explain",
+            "difficulty": "easy",
+            "question": "Give two examples of acids you find in everyday life and explain where they are found.",
+            "correctAnswer": "citric acid in oranges/lemons, acetic acid in vinegar, hydrochloric acid in stomach",
+            "hint": "Think about food items that taste sour — what acid do they contain?",
+            "explanation": "Citric acid is found in oranges and lemons (gives sour taste). Acetic acid is found in vinegar. Hydrochloric acid is in our stomach for digestion."
+          }
+        ],
+        "medium": [
+          {
+            "questionId": "s1-m1",
+            "type": "mcq",
+            "difficulty": "medium",
+            "question": "Why does hydrochloric acid (HCl) qualify as an acid?",
+            "options": ["It produces H⁺ ions when dissolved in water", "It produces OH⁻ ions in water", "It has a pH above 7", "It turns red litmus paper blue"],
+            "correctAnswer": "It produces H⁺ ions when dissolved in water",
+            "hint": "The definition of an acid is based on what ions it produces.",
+            "explanation": "Acids are defined as substances that produce hydrogen ions (H⁺) when dissolved in water. HCl → H⁺ + Cl⁻."
+          },
+          {
+            "questionId": "s1-m2",
+            "type": "match",
+            "difficulty": "medium",
+            "question": "Match each substance to its correct classification.",
+            "pairs": [
+              {"left": "Lemon juice", "right": "Acid"},
+              {"left": "Baking soda solution", "right": "Alkali (base)"},
+              {"left": "Pure water", "right": "Neutral"},
+              {"left": "Stomach acid (HCl)", "right": "Strong acid"}
+            ],
+            "correctAnswer": "Lemon juice=Acid,Baking soda solution=Alkali (base),Pure water=Neutral,Stomach acid (HCl)=Strong acid",
+            "hint": "Think about the taste and properties of each substance.",
+            "explanation": "Lemon juice contains citric acid; baking soda is sodium bicarbonate (a base); pure water is neutral pH 7; stomach acid is HCl, a strong acid."
+          },
+          {
+            "questionId": "s1-m3",
+            "type": "explain",
+            "difficulty": "medium",
+            "question": "A substance has a pH of 2. Describe three properties you would expect it to have.",
+            "correctAnswer": "sour taste, turns blue litmus red, pH below 7, reacts with metals, reacts with bases",
+            "hint": "pH 2 is well below 7 — it is strongly acidic. List properties of acids.",
+            "explanation": "pH 2 indicates a strong acid: it would taste sour, turn blue litmus red, react vigorously with metals releasing H₂ gas, and neutralise bases."
+          },
+          {
+            "questionId": "s1-m4",
+            "type": "fill_blank",
+            "difficulty": "medium",
+            "question": "Bases produce ___ ions (OH⁻) when dissolved in water, which is why they feel soapy and taste bitter.",
+            "correctAnswer": "hydroxide",
+            "hint": "OH⁻ is the ___ ion — name it.",
+            "explanation": "Bases release hydroxide ions (OH⁻) in water. These interact with skin oils to create the characteristic soapy feel."
+          },
+          {
+            "questionId": "s1-m5",
+            "type": "mcq",
+            "difficulty": "medium",
+            "question": "Which statement correctly distinguishes an alkali from a base?",
+            "options": [
+              "All alkalis are bases that dissolve in water, but some bases do not dissolve",
+              "Alkalis are stronger than bases",
+              "Bases have a higher pH than alkalis",
+              "Alkalis react with metals; bases do not"
+            ],
+            "correctAnswer": "All alkalis are bases that dissolve in water, but some bases do not dissolve",
+            "hint": "The section says 'all alkalis are bases, but not all bases are alkalis'. What makes something an alkali?",
+            "explanation": "Solubility is the key difference. Alkalis dissolve in water (producing OH⁻ in solution); insoluble bases are still bases but not alkalis."
+          }
+        ],
+        "hard": [
+          {
+            "questionId": "s1-h1",
+            "type": "explain",
+            "difficulty": "hard",
+            "question": "Explain why vinegar (pH ≈ 3) feels less 'harmful' than car battery acid (pH ≈ 0), even though both are acids.",
+            "correctAnswer": "pH 0 has 1000x more H+ ions than pH 3; stronger acid causes more damage",
+            "hint": "The pH scale is logarithmic — each pH unit represents a 10x difference in H⁺ concentration.",
+            "explanation": "The pH scale is logarithmic. pH 0 has 1,000 times more H⁺ ions than pH 3 (10³). More H⁺ ions means more corrosive power, which is why car battery acid is extremely dangerous."
+          },
+          {
+            "questionId": "s1-h2",
+            "type": "mcq",
+            "difficulty": "hard",
+            "question": "Why do soap and cleaning products feel slippery on skin, while acidic substances do not?",
+            "options": [
+              "Alkalis saponify (react with) skin oils, breaking them down and creating a slippery layer",
+              "Alkalis absorb water from skin, making it smooth",
+              "Acids are too strong to interact with skin oils",
+              "Alkalis reduce friction by releasing hydrogen gas"
+            ],
+            "correctAnswer": "Alkalis saponify (react with) skin oils, breaking them down and creating a slippery layer",
+            "hint": "Soap-making (saponification) involves reacting fats with a strong alkali — the same reaction happens on skin.",
+            "explanation": "Alkalis undergo saponification — they react with the fatty oils on skin, breaking them down. This produces a slippery, soap-like layer, which is why alkalis feel slippery."
+          },
+          {
+            "questionId": "s1-h3",
+            "type": "fill_blank",
+            "difficulty": "hard",
+            "question": "A substance with a pH of 14 has ___ times more OH⁻ ions than a substance with a pH of 10, because the pH scale is ___.",
+            "correctAnswer": "10000, logarithmic",
+            "hint": "Each pH unit is a 10x difference. 14 - 10 = 4 units = 10⁴ = 10000.",
+            "explanation": "The pH scale is logarithmic (base 10). A difference of 4 pH units means 10⁴ = 10,000 times greater OH⁻ concentration."
+          },
+          {
+            "questionId": "s1-h4",
+            "type": "scenario",
+            "difficulty": "hard",
+            "scenarioParagraph": "A chemist tests an unknown liquid. It turns blue litmus red, reacts with zinc to produce a gas, and has a pH of 1. She then adds sodium hydroxide solution drop by drop, stirring after each drop.",
+            "question": "As she adds sodium hydroxide, what happens to the pH and what reaction is occurring?",
+            "options": [
+              "pH rises towards 7 as neutralisation occurs: H⁺ + OH⁻ → H₂O",
+              "pH drops towards 0 as the acid becomes more concentrated",
+              "pH stays at 1 because acids cannot be neutralised by bases",
+              "pH rises to 14 immediately when any NaOH is added"
+            ],
+            "correctAnswer": "pH rises towards 7 as neutralisation occurs: H⁺ + OH⁻ → H₂O",
+            "hint": "When acid and base mix, they neutralise each other — hydrogen ions meet hydroxide ions.",
+            "explanation": "Adding NaOH (a base) to an acid causes neutralisation: H⁺ + OH⁻ → H₂O. The H⁺ ions are consumed, pH rises towards 7. With excess NaOH, pH would exceed 7."
+          }
+        ]
+      }
+    },
+    {
+      "sectionId": "section-2",
+      "title": "The pH Scale and Indicators",
+      "content": "The pH scale is a way of measuring how acidic or alkaline a substance is. It runs from 0 to 14.\n\n- **pH 0–6**: Acidic (lower number = stronger acid)\n- **pH 7**: Neutral\n- **pH 8–14**: Alkaline (higher number = stronger alkali)\n\nThe scale is logarithmic — each whole number represents a 10-fold change in acidity. So pH 3 is 10 times more acidic than pH 4, and 100 times more acidic than pH 5.\n\n**Indicators**\nIndicators are substances that change colour depending on whether they are in acidic or alkaline conditions.\n\n**Litmus**: The most common indicator. Turns red in acids, blue in bases, stays purple in neutral solutions. Litmus is extracted from lichens.\n\n**Universal Indicator**: A mixture of different indicators that gives a range of colours across the pH scale (red at pH 1 → orange/yellow for mild acids → green at pH 7 → blue/violet at pH 14). Universal indicator gives approximate pH.\n\n**Phenolphthalein**: Colourless in acids, pink in bases. Useful for detecting the endpoint in neutralisation reactions.\n\n**Natural Indicators**:\n- Red cabbage juice turns red in acid, green in alkali\n- Turmeric turns red-brown in alkali\n- Rose petals change colour with pH\n\n**Common pH Values (Approximate)**:\n| Substance | pH |\n|-----------|----|\n| Stomach acid | 1-2 |\n| Lemon juice | 2-3 |\n| Vinegar | 3 |\n| Milk | 6.5 |\n| Pure water | 7 |\n| Blood | 7.4 |\n| Baking soda | 8-9 |\n| Soap | 9-10 |\n| Bleach | 12-13 |",
+      "keyConcepts": ["pH scale", "logarithmic scale", "litmus", "universal indicator", "phenolphthalein", "natural indicators"],
+      "wordCount": 255,
+      "assessments": {
+        "easy": [
+          {
+            "questionId": "s2-e1",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "What colour does universal indicator turn in a strongly acidic solution (pH 1)?",
+            "options": ["Red", "Green", "Blue", "Purple"],
+            "correctAnswer": "Red",
+            "hint": "The section says universal indicator goes from red at pH 1 to violet at pH 14.",
+            "explanation": "Universal indicator turns red at pH 1, indicating a strongly acidic solution."
+          },
+          {
+            "questionId": "s2-e2",
+            "type": "fill_blank",
+            "difficulty": "easy",
+            "question": "Litmus paper turns ___ in acidic solutions and ___ in basic solutions.",
+            "correctAnswer": "red, blue",
+            "hint": "'Acids turn blue litmus red; bases turn red litmus blue' — a classic memory aid.",
+            "explanation": "Litmus turns red in acids and blue in bases. It turns purple in neutral solutions."
+          },
+          {
+            "questionId": "s2-e3",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "A solution has a pH of 10. Which of the following correctly describes it?",
+            "options": ["It is alkaline", "It is acidic", "It is neutral", "It is pure water"],
+            "correctAnswer": "It is alkaline",
+            "hint": "pH above 7 = alkaline. pH below 7 = acidic. pH 7 = neutral.",
+            "explanation": "pH 10 is above 7, so the solution is alkaline (basic)."
+          },
+          {
+            "questionId": "s2-e4",
+            "type": "explain",
+            "difficulty": "easy",
+            "question": "What is a natural indicator? Give one example and describe how it changes colour.",
+            "correctAnswer": "red cabbage juice turns red in acid and green in alkali",
+            "hint": "The section lists natural substances that change colour with pH — name one.",
+            "explanation": "A natural indicator changes colour with pH. Red cabbage juice turns red in acidic conditions and green in alkaline conditions, making it a useful natural indicator."
+          }
+        ],
+        "medium": [
+          {
+            "questionId": "s2-m1",
+            "type": "mcq",
+            "difficulty": "medium",
+            "question": "A solution at pH 4 is compared with one at pH 6. How much more acidic is the pH 4 solution?",
+            "options": ["100 times more acidic", "2 times more acidic", "10 times more acidic", "1000 times more acidic"],
+            "correctAnswer": "100 times more acidic",
+            "hint": "The pH scale is logarithmic — each unit is 10x. pH 4 to pH 6 is 2 units.",
+            "explanation": "The pH scale is logarithmic. A difference of 2 pH units = 10² = 100 times more acidic."
+          },
+          {
+            "questionId": "s2-m2",
+            "type": "explain",
+            "difficulty": "medium",
+            "question": "Why is universal indicator more useful than litmus for identifying an unknown solution?",
+            "correctAnswer": "universal indicator gives a range of colours showing approximate pH; litmus only tells acid or base",
+            "hint": "Litmus only gives two outcomes; universal indicator gives many colours.",
+            "explanation": "Litmus only tells you acid vs. base (two outcomes). Universal indicator gives different colours at different pH values, giving you approximate pH across the full 0-14 range."
+          },
+          {
+            "questionId": "s2-m3",
+            "type": "match",
+            "difficulty": "medium",
+            "question": "Match each substance to its approximate pH.",
+            "pairs": [
+              {"left": "Stomach acid", "right": "pH 1-2"},
+              {"left": "Blood", "right": "pH 7.4"},
+              {"left": "Baking soda solution", "right": "pH 8-9"},
+              {"left": "Bleach", "right": "pH 12-13"}
+            ],
+            "correctAnswer": "Stomach acid=pH 1-2,Blood=pH 7.4,Baking soda solution=pH 8-9,Bleach=pH 12-13",
+            "hint": "Stomach acid is very acidic; blood is almost neutral; bleach is strongly alkaline.",
+            "explanation": "Stomach acid is strongly acidic (pH 1-2); blood is very slightly alkaline (7.4); baking soda is mildly alkaline (8-9); bleach is strongly alkaline (12-13)."
+          },
+          {
+            "questionId": "s2-m4",
+            "type": "fill_blank",
+            "difficulty": "medium",
+            "question": "Phenolphthalein indicator is ___ in acids and turns ___ in alkaline solutions.",
+            "correctAnswer": "colourless, pink",
+            "hint": "The section describes phenolphthalein's colour change explicitly.",
+            "explanation": "Phenolphthalein is colourless in acidic or neutral solutions and turns pink/magenta in alkaline solutions. This makes it useful for titration endpoints."
+          },
+          {
+            "questionId": "s2-m5",
+            "type": "scenario",
+            "difficulty": "medium",
+            "scenarioParagraph": "A student is given four unlabelled solutions: A, B, C, D. She tests each with universal indicator and gets: A=red, B=green, C=blue, D=orange.",
+            "question": "Rank these solutions from most acidic to most alkaline.",
+            "options": [
+              "A (red) → D (orange) → B (green) → C (blue)",
+              "C (blue) → B (green) → D (orange) → A (red)",
+              "B (green) → A (red) → D (orange) → C (blue)",
+              "D (orange) → A (red) → C (blue) → B (green)"
+            ],
+            "correctAnswer": "A (red) → D (orange) → B (green) → C (blue)",
+            "hint": "Universal indicator: red=strongly acidic, orange=mildly acidic, green=neutral, blue=alkaline.",
+            "explanation": "Red is most acidic (pH ~1-3), orange is mildly acidic (pH ~4-6), green is neutral (pH 7), blue is alkaline (pH 8-11). Order: A→D→B→C."
+          }
+        ],
+        "hard": [
+          {
+            "questionId": "s2-h1",
+            "type": "explain",
+            "difficulty": "hard",
+            "question": "Blood has a pH of 7.4. If blood pH drops to 7.0 due to illness, how much more acidic is it? Why is even this small change medically dangerous?",
+            "correctAnswer": "2.5x more acidic; enzymes in blood denature at wrong pH causing organ failure",
+            "hint": "pH drop of 0.4 ≈ 10^0.4 ≈ 2.5 times. Think about what controls body chemistry.",
+            "explanation": "A pH drop of 0.4 makes blood about 2.5 times more acidic (10^0.4). This is dangerous because blood enzymes and proteins function only within a narrow pH range — even small changes disrupt cellular chemistry, causing acidosis and organ failure."
+          },
+          {
+            "questionId": "s2-h2",
+            "type": "mcq",
+            "difficulty": "hard",
+            "question": "A student adds a few drops of red cabbage juice to an unknown solution. It turns greenish. She then adds a small amount of lemon juice. What will she observe?",
+            "options": [
+              "The colour shifts towards red/pink as the acid lowers the pH",
+              "The colour becomes darker green as the acid adds to the alkalinity",
+              "The colour becomes colourless as acid and base cancel out",
+              "No change because natural indicators only work with litmus"
+            ],
+            "correctAnswer": "The colour shifts towards red/pink as the acid lowers the pH",
+            "hint": "Greenish means alkaline. Adding acid lowers pH. Red cabbage turns red in acid.",
+            "explanation": "Greenish colour in red cabbage juice means the solution is alkaline. Adding lemon juice (an acid) lowers the pH, shifting the colour towards red/pink."
+          },
+          {
+            "questionId": "s2-h3",
+            "type": "fill_blank",
+            "difficulty": "hard",
+            "question": "If solution X is 1000 times more acidic than solution Y, then solution X has a pH that is ___ units lower than solution Y.",
+            "correctAnswer": "3",
+            "hint": "1000 = 10³. The pH scale is logarithmic base 10.",
+            "explanation": "1000 = 10³, so a 1000-fold difference in acidity corresponds to 3 pH units. Solution X has a pH 3 units lower than Y."
+          },
+          {
+            "questionId": "s2-h4",
+            "type": "scenario",
+            "difficulty": "hard",
+            "scenarioParagraph": "A chemist has a solution of pH 2 (volume: 1L). She wants to raise the pH to 7 by adding an alkali.",
+            "question": "Which statement best describes the challenge of this task?",
+            "options": [
+              "She needs to add 100,000 times more OH⁻ ions than are currently present as H⁺ ions, because pH 7 vs pH 2 is a 5-unit logarithmic jump",
+              "She just needs to add 5 ml of any alkali to increase pH by 5",
+              "She needs to raise temperature to reduce acidity",
+              "She only needs a few drops of water to dilute the acid to neutral"
+            ],
+            "correctAnswer": "She needs to add 100,000 times more OH⁻ ions than are currently present as H⁺ ions, because pH 7 vs pH 2 is a 5-unit logarithmic jump",
+            "hint": "5 pH units = 10⁵ = 100,000-fold difference in H⁺ concentration.",
+            "explanation": "Moving from pH 2 to pH 7 is a 5-unit change = 10⁵ = 100,000-fold reduction in H⁺. The chemist must add enough OH⁻ to neutralise all 100,000 units of relative H⁺ concentration, not just a little alkali."
+          }
+        ]
+      }
+    },
+    {
+      "sectionId": "section-3",
+      "title": "Neutralisation and Salts",
+      "content": "When an acid and a base react together, they neutralise each other. This reaction always produces a salt and water.\n\n**The Neutralisation Reaction:**\nAcid + Base → Salt + Water\n\nOr in ionic form: H⁺ + OH⁻ → H₂O\n\nThe pH of the product depends on the relative amounts of acid and base:\n- Excess acid → pH below 7\n- Equal amounts (complete neutralisation) → pH 7\n- Excess base → pH above 7\n\n**What are Salts?**\nA salt is a compound formed when the hydrogen in an acid is replaced by a metal or ammonium ion. The type of salt formed depends on the acid used:\n- Hydrochloric acid (HCl) → chloride salts (e.g., NaCl — table salt)\n- Sulphuric acid (H₂SO₄) → sulphate salts (e.g., CaSO₄)\n- Nitric acid (HNO₃) → nitrate salts (e.g., KNO₃)\n\n**Everyday Examples of Neutralisation:**\n- Indigestion: Excess stomach acid (HCl) causes heartburn. Antacids contain bases (like Mg(OH)₂ or CaCO₃) that neutralise the excess acid.\n- Soil treatment: Acidic soil has low pH. Farmers add calcium hydroxide (lime) to neutralise acid and raise pH to the optimum range for crops (6-7).\n- Wastewater treatment: Industrial waste acids are neutralised before discharge into water bodies.\n- Bee stings: Bee venom is acidic — applying baking soda (alkaline) helps neutralise it.\n- Wasp stings: Wasp venom is alkaline — applying vinegar (acidic) helps neutralise it.\n\n**Making Salts:**\nTo make a pure salt:\n1. Mix acid and base in correct proportions\n2. Evaporate water\n3. Collect crystals of salt",
+      "keyConcepts": ["neutralisation", "salt formation", "antacids", "soil treatment", "acid + base reaction"],
+      "wordCount": 260,
+      "assessments": {
+        "easy": [
+          {
+            "questionId": "s3-e1",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "What are the products of a neutralisation reaction between an acid and a base?",
+            "options": ["Salt and water", "Only salt", "Water and gas", "Only water"],
+            "correctAnswer": "Salt and water",
+            "hint": "The section gives the equation: Acid + Base → ___ + ___.",
+            "explanation": "Neutralisation always produces a salt and water: Acid + Base → Salt + Water."
+          },
+          {
+            "questionId": "s3-e2",
+            "type": "fill_blank",
+            "difficulty": "easy",
+            "question": "When you take an antacid for indigestion, the antacid ___ the excess stomach acid, reducing the pain.",
+            "correctAnswer": "neutralises",
+            "hint": "The process when acid meets base is called ___.",
+            "explanation": "Antacids are bases that neutralise excess hydrochloric acid in the stomach, raising pH and relieving heartburn."
+          },
+          {
+            "questionId": "s3-e3",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "A farmer's soil has a pH of 4 and crops grow poorly. What should the farmer add?",
+            "options": ["Calcium hydroxide (lime) — an alkali to neutralise the acid", "More water to dilute the acid", "Sulphuric acid to balance the soil", "Vinegar to kill bacteria"],
+            "correctAnswer": "Calcium hydroxide (lime) — an alkali to neutralise the acid",
+            "hint": "pH 4 is acidic. To raise pH, you need to add something alkaline.",
+            "explanation": "Acidic soil (pH 4) is neutralised by adding lime (Ca(OH)₂), an alkali. This raises pH to the optimal 6-7 range for most crops."
+          },
+          {
+            "questionId": "s3-e4",
+            "type": "explain",
+            "difficulty": "easy",
+            "question": "Why does applying baking soda to a bee sting help reduce the pain, but the same treatment would make a wasp sting worse?",
+            "correctAnswer": "bee venom is acidic; baking soda is alkaline and neutralises it. wasp venom is alkaline; adding alkali makes it worse",
+            "hint": "The section tells you the pH of bee and wasp venom.",
+            "explanation": "Bee venom is acidic, so baking soda (alkaline) neutralises it. Wasp venom is alkaline, so baking soda would make it more alkaline. You'd apply vinegar (acidic) for a wasp sting instead."
+          }
+        ],
+        "medium": [
+          {
+            "questionId": "s3-m1",
+            "type": "mcq",
+            "difficulty": "medium",
+            "question": "When sodium hydroxide reacts with hydrochloric acid, what salt is formed?",
+            "options": ["Sodium chloride (NaCl)", "Sodium sulphate (Na₂SO₄)", "Sodium nitrate (NaNO₃)", "Sodium carbonate (Na₂CO₃)"],
+            "correctAnswer": "Sodium chloride (NaCl)",
+            "hint": "HCl produces chloride salts. Sodium + chloride = ?",
+            "explanation": "NaOH + HCl → NaCl + H₂O. HCl always produces chloride salts; sodium is the metal from NaOH, giving sodium chloride (table salt)."
+          },
+          {
+            "questionId": "s3-m2",
+            "type": "explain",
+            "difficulty": "medium",
+            "question": "Explain the step-by-step process of making pure salt crystals from hydrochloric acid and sodium hydroxide.",
+            "correctAnswer": "mix in correct proportions to neutralise, evaporate water, collect crystals",
+            "hint": "The section gives the three-step process at the end.",
+            "explanation": "1) Mix acid and base in stoichiometric proportions until neutralised (pH 7). 2) Heat gently to evaporate water. 3) Allow remaining solution to cool and crystallise, then collect the salt crystals."
+          },
+          {
+            "questionId": "s3-m3",
+            "type": "match",
+            "difficulty": "medium",
+            "question": "Match each acid to the type of salt it forms.",
+            "pairs": [
+              {"left": "Hydrochloric acid (HCl)", "right": "Chloride salts"},
+              {"left": "Sulphuric acid (H₂SO₄)", "right": "Sulphate salts"},
+              {"left": "Nitric acid (HNO₃)", "right": "Nitrate salts"},
+              {"left": "Any acid + base", "right": "Salt + water"}
+            ],
+            "correctAnswer": "Hydrochloric acid (HCl)=Chloride salts,Sulphuric acid (H₂SO₄)=Sulphate salts,Nitric acid (HNO₃)=Nitrate salts,Any acid + base=Salt + water",
+            "hint": "The name of the salt comes from the acid: HCl → chloride, H₂SO₄ → sulphate, HNO₃ → nitrate.",
+            "explanation": "The anion (negative ion) in the salt comes from the acid: HCl gives Cl⁻ (chloride), H₂SO₄ gives SO₄²⁻ (sulphate), HNO₃ gives NO₃⁻ (nitrate)."
+          },
+          {
+            "questionId": "s3-m4",
+            "type": "fill_blank",
+            "difficulty": "medium",
+            "question": "If excess acid remains after a neutralisation reaction, the final pH of the solution will be ___ than 7.",
+            "correctAnswer": "less (lower)",
+            "hint": "Excess acid means more H⁺ ions remain — what does that do to pH?",
+            "explanation": "Excess acid means unreacted H⁺ ions remain in solution, keeping the pH below 7."
+          },
+          {
+            "questionId": "s3-m5",
+            "type": "scenario",
+            "difficulty": "medium",
+            "scenarioParagraph": "A factory discharges wastewater with a pH of 2 into a river. Environmental scientists add sodium carbonate (an alkali) to the wastewater before discharge.",
+            "question": "What reaction occurs and what should the target pH of treated water be?",
+            "options": [
+              "Neutralisation; the target should be pH 7 (neutral) to be safe for aquatic life",
+              "Oxidation; the target should be pH 2 to remain consistent",
+              "Evaporation; the target should be pH 14 for full safety",
+              "Precipitation; the target should be pH 0 to concentrate pollutants"
+            ],
+            "correctAnswer": "Neutralisation; the target should be pH 7 (neutral) to be safe for aquatic life",
+            "hint": "pH 2 acid water is harmful to river life — what process makes it safe?",
+            "explanation": "Adding sodium carbonate (a base) neutralises the acidic wastewater. The target is pH 7 (neutral), which is safe for aquatic organisms."
+          }
+        ],
+        "hard": [
+          {
+            "questionId": "s3-h1",
+            "type": "explain",
+            "difficulty": "hard",
+            "question": "Mg(OH)₂ is commonly used in antacids rather than NaOH, even though both are strong bases. Suggest why.",
+            "correctAnswer": "Mg(OH)2 is less soluble and reacts slowly, safer than NaOH which is caustic",
+            "hint": "NaOH is highly caustic — think about what would happen if something too strongly alkaline went into your stomach.",
+            "explanation": "NaOH is highly caustic and would damage the stomach lining. Mg(OH)₂ is less soluble, releases OH⁻ slowly, and is much less corrosive — it neutralises acid gently without damaging tissue."
+          },
+          {
+            "questionId": "s3-h2",
+            "type": "mcq",
+            "difficulty": "hard",
+            "question": "Potassium hydroxide (KOH) reacts with sulphuric acid (H₂SO₄). Which products are formed?",
+            "options": [
+              "Potassium sulphate (K₂SO₄) and water",
+              "Potassium chloride (KCl) and water",
+              "Potassium nitrate (KNO₃) and water",
+              "Potassium oxide (K₂O) and hydrogen gas"
+            ],
+            "correctAnswer": "Potassium sulphate (K₂SO₄) and water",
+            "hint": "H₂SO₄ produces sulphate salts. The metal is potassium. Apply: Acid + Base → Salt + Water.",
+            "explanation": "2KOH + H₂SO₄ → K₂SO₄ + 2H₂O. The salt formed is potassium sulphate (from K⁺ and SO₄²⁻)."
+          },
+          {
+            "questionId": "s3-h3",
+            "type": "fill_blank",
+            "difficulty": "hard",
+            "question": "In neutralisation, the H⁺ ion from the acid combines with the OH⁻ ion from the base to form ___, which is why the reaction releases heat (it is ___thermic).",
+            "correctAnswer": "water (H₂O), exo",
+            "hint": "H⁺ + OH⁻ → ? Neutralisation releases energy as heat = exo___thermic.",
+            "explanation": "H⁺ + OH⁻ → H₂O. The formation of water bonds releases energy as heat, making neutralisation an exothermic reaction."
+          },
+          {
+            "questionId": "s3-h4",
+            "type": "scenario",
+            "difficulty": "hard",
+            "scenarioParagraph": "A student accidentally mixes 50 ml of 2M HCl with 50 ml of 1M NaOH. After the reaction, the resulting solution is tested with universal indicator.",
+            "question": "What colour will the indicator show and why?",
+            "options": [
+              "Red/orange — because excess HCl remains after neutralising all NaOH, leaving an acidic solution",
+              "Green — because equal volumes were mixed, giving perfect neutralisation",
+              "Blue — because NaOH is always in excess",
+              "Colourless — because the acid and base cancel perfectly"
+            ],
+            "correctAnswer": "Red/orange — because excess HCl remains after neutralising all NaOH, leaving an acidic solution",
+            "hint": "Calculate moles: HCl moles = 2M × 0.05L = 0.1 mol. NaOH moles = 1M × 0.05L = 0.05 mol. Compare.",
+            "explanation": "HCl moles = 2 × 0.05 = 0.1 mol. NaOH moles = 1 × 0.05 = 0.05 mol. NaOH neutralises 0.05 mol HCl; 0.05 mol HCl excess remains. Solution is acidic → red/orange with universal indicator."
+          }
+        ]
+      }
+    },
+    {
+      "sectionId": "section-4",
+      "title": "Acids and Bases Around Us",
+      "content": "Acids and bases play crucial roles in everyday life, industry, agriculture, and our own bodies. Let's explore how.\n\n**In Our Bodies:**\n- Stomach acid (HCl, pH 1-2): Breaks down food proteins and kills harmful bacteria in food\n- Blood (pH 7.35-7.45): Must stay within this narrow range; even small pH changes can be life-threatening\n- Saliva (pH 6.5-7.5): Contains amylase enzyme that begins starch digestion\n- Skin (pH 4.5-5.5): Slightly acidic, which protects against bacteria and fungi\n\n**In Food and Cooking:**\n- Baking soda (NaHCO₃) releases CO₂ when it reacts with acidic ingredients (like buttermilk), making bread and cakes rise\n- Vinegar (acetic acid) preserves food by making the environment too acidic for bacteria to grow\n- Yoghurt and cheese are made when bacteria convert milk sugars to lactic acid (pH drops, milk proteins solidify)\n\n**In Agriculture:**\n- Most crops grow best in slightly acidic to neutral soil (pH 6-7)\n- Acidic rain (caused by SO₂ and NO₂ pollution) lowers soil pH, damaging roots and leaching nutrients\n- Nitrogen fertilisers can make soil acidic over time\n\n**In Industry:**\n- Sulphuric acid: Used in car batteries, fertiliser manufacturing, and metal processing\n- Hydrochloric acid: Used in food processing and cleaning metal surfaces\n- Sodium hydroxide: Used in soap making, paper production, and drain cleaners\n\n**Environmental Concern — Acid Rain:**\nWhen fossil fuels burn, sulphur dioxide (SO₂) and nitrogen oxides (NOₓ) are released. These react with water in clouds to form sulphuric acid (H₂SO₄) and nitric acid (HNO₃), which fall as acid rain (pH 4-5). Effects include damaging forests, acidifying lakes (killing fish), and eroding stone buildings.",
+      "keyConcepts": ["stomach acid", "acid rain", "baking soda", "soil pH", "industrial acids"],
+      "wordCount": 295,
+      "assessments": {
+        "easy": [
+          {
+            "questionId": "s4-e1",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "Why do bakers add baking soda to cake mixture?",
+            "options": ["It reacts with acidic ingredients to release CO₂, making the cake rise", "It adds a sweet flavour to the cake", "It prevents the cake from burning", "It absorbs excess water from the mixture"],
+            "correctAnswer": "It reacts with acidic ingredients to release CO₂, making the cake rise",
+            "hint": "Baking soda is NaHCO₃ — a base. When it meets acid in the batter, what gas is produced?",
+            "explanation": "Baking soda reacts with acidic ingredients (like buttermilk) producing CO₂ bubbles that expand during baking, making the cake light and fluffy."
+          },
+          {
+            "questionId": "s4-e2",
+            "type": "fill_blank",
+            "difficulty": "easy",
+            "question": "Acid rain forms when ___ and nitrogen oxides from burning fossil fuels dissolve in rainwater to form acids.",
+            "correctAnswer": "sulphur dioxide (SO₂)",
+            "hint": "The section names two gases released when fossil fuels burn.",
+            "explanation": "SO₂ and NOₓ from burning fossil fuels dissolve in atmospheric water, forming H₂SO₄ and HNO₃ — the components of acid rain."
+          },
+          {
+            "questionId": "s4-e3",
+            "type": "mcq",
+            "difficulty": "easy",
+            "question": "What is the main role of stomach acid (HCl) in digestion?",
+            "options": ["Breaks down proteins and kills bacteria in food", "Absorbs vitamins from food", "Digests fats and oils", "Produces enzymes that break down starch"],
+            "correctAnswer": "Breaks down proteins and kills bacteria in food",
+            "hint": "The section says stomach acid 'breaks down food proteins and kills harmful bacteria'.",
+            "explanation": "Stomach HCl (pH 1-2) denatures proteins for enzyme digestion and kills most bacteria that enter with food, protecting against food-borne illness."
+          },
+          {
+            "questionId": "s4-e4",
+            "type": "explain",
+            "difficulty": "easy",
+            "question": "How does vinegar preserve food, and what principle from this chapter explains it?",
+            "correctAnswer": "vinegar is acidic and creates environment too acidic for bacteria, which need neutral pH",
+            "hint": "Think about what pH bacteria need to survive, and what pH vinegar has.",
+            "explanation": "Vinegar (acetic acid, pH ~3) creates an acidic environment that bacteria cannot survive in — most bacteria need near-neutral pH. This is neutralisation/pH principle applied to preservation."
+          }
+        ],
+        "medium": [
+          {
+            "questionId": "s4-m1",
+            "type": "mcq",
+            "difficulty": "medium",
+            "question": "Acid rain has a pH of about 4-5. What is the impact on a lake that normally has pH 7?",
+            "options": [
+              "Lake pH drops, becoming 10-1000 times more acidic, harming or killing aquatic life",
+              "Lake pH rises, becoming more alkaline and improving fish health",
+              "Lake pH stays the same because water neutralises acid rain",
+              "Acid rain only affects soil, not lakes or rivers"
+            ],
+            "correctAnswer": "Lake pH drops, becoming 10-1000 times more acidic, harming or killing aquatic life",
+            "hint": "Acid rain (pH 4-5) is 10-1000x more acidic than neutral water (pH 7). What does this do to a lake?",
+            "explanation": "Acid rain (pH 4-5) is 100-1000 times more acidic than the lake (pH 7). When it accumulates, lake pH drops, damaging fish gills, killing aquatic plants, and disrupting the ecosystem."
+          },
+          {
+            "questionId": "s4-m2",
+            "type": "explain",
+            "difficulty": "medium",
+            "question": "Why must blood pH stay between 7.35 and 7.45? What happens if it drops to 7.0?",
+            "correctAnswer": "enzymes only work in narrow pH range; lower pH denatures blood proteins causing acidosis and organ failure",
+            "hint": "Think about what enzymes need to function, and what a pH of 7.0 means compared to 7.35.",
+            "explanation": "Blood enzymes and proteins function only in a narrow pH range. At pH 7.0, enzymes begin to lose shape (denature), disrupting cellular respiration, oxygen transport, and nerve function — a condition called acidosis that can be fatal."
+          },
+          {
+            "questionId": "s4-m3",
+            "type": "match",
+            "difficulty": "medium",
+            "question": "Match each substance to its use in industry or daily life.",
+            "pairs": [
+              {"left": "Sulphuric acid (H₂SO₄)", "right": "Car batteries and fertiliser manufacturing"},
+              {"left": "Sodium hydroxide (NaOH)", "right": "Soap making and drain cleaners"},
+              {"left": "Hydrochloric acid (HCl)", "right": "Food processing and metal cleaning"},
+              {"left": "Sodium bicarbonate (NaHCO₃)", "right": "Baking agent and antacid"}
+            ],
+            "correctAnswer": "Sulphuric acid (H₂SO₄)=Car batteries and fertiliser manufacturing,Sodium hydroxide (NaOH)=Soap making and drain cleaners,Hydrochloric acid (HCl)=Food processing and metal cleaning,Sodium bicarbonate (NaHCO₃)=Baking agent and antacid",
+            "hint": "The section lists uses for each of these substances.",
+            "explanation": "Each acid and base has important industrial uses: H₂SO₄ in batteries and fertilisers, NaOH in soap, HCl in food and metal industries, NaHCO₃ as a gentle base for baking and antacids."
+          },
+          {
+            "questionId": "s4-m4",
+            "type": "fill_blank",
+            "difficulty": "medium",
+            "question": "Nitrogen fertilisers used by farmers can make soil more ___ over time, which is why farmers must regularly test and adjust soil pH.",
+            "correctAnswer": "acidic",
+            "hint": "The section says nitrogen fertilisers have a specific effect on soil pH.",
+            "explanation": "Nitrogen fertilisers release ammonium ions, which are nitrified to nitric acid by soil bacteria, gradually acidifying the soil."
+          },
+          {
+            "questionId": "s4-m5",
+            "type": "scenario",
+            "difficulty": "medium",
+            "scenarioParagraph": "A farmer tests soil in two fields. Field A has pH 5.5. Field B has pH 7.2. She plans to grow wheat, which grows best at pH 6-7.",
+            "question": "What treatment, if any, should she apply to each field?",
+            "options": [
+              "Add lime (calcium hydroxide) to Field A to raise pH; Field B needs no treatment",
+              "Add sulphuric acid to Field B to lower pH; Field A is already optimal",
+              "Add lime to both fields to maximise alkalinity",
+              "Both fields are suitable for wheat without any treatment"
+            ],
+            "correctAnswer": "Add lime (calcium hydroxide) to Field A to raise pH; Field B needs no treatment",
+            "hint": "Compare each field's pH to the optimal range for wheat (pH 6-7).",
+            "explanation": "Field A (pH 5.5) is below the 6-7 optimal range — add lime to raise pH. Field B (pH 7.2) is just above but close enough; monitoring is prudent but immediate treatment is less urgent."
+          }
+        ],
+        "hard": [
+          {
+            "questionId": "s4-h1",
+            "type": "explain",
+            "difficulty": "hard",
+            "question": "Explain the complete chain of events from burning coal in a power station to a marble statue in a city showing surface erosion.",
+            "correctAnswer": "coal burns → SO2 released → SO2 + water → H2SO4 → acid rain → H2SO4 + CaCO3 (marble) → CaSO4 + CO2 + H2O, marble erodes",
+            "hint": "Trace: coal → SO₂ → acid rain → marble (CaCO₃). What acid reacts with calcium carbonate?",
+            "explanation": "Coal burning releases SO₂ → reacts with atmospheric H₂O to form H₂SO₄ (acid rain) → falls on marble statues (CaCO₃) → H₂SO₄ + CaCO₃ → CaSO₄ + H₂O + CO₂. The calcium sulphate is softer than marble and washes away, eroding the statue."
+          },
+          {
+            "questionId": "s4-h2",
+            "type": "mcq",
+            "difficulty": "hard",
+            "question": "Your skin has a natural acidic pH of 4.5-5.5 (the 'acid mantle'). Why would using a strongly alkaline soap (pH 12) repeatedly actually worsen certain skin conditions?",
+            "options": [
+              "Strong alkali disrupts the acid mantle, raises skin pH, and allows bacteria and fungi to thrive",
+              "Strong alkali makes skin oilier, trapping dirt and bacteria",
+              "Strong alkali neutralises all skin oils permanently, preventing natural moisturising",
+              "Strong alkali causes skin to produce more acid, worsening the imbalance"
+            ],
+            "correctAnswer": "Strong alkali disrupts the acid mantle, raises skin pH, and allows bacteria and fungi to thrive",
+            "hint": "The acidic skin pH protects against bacteria — what happens if you remove this protection?",
+            "explanation": "The skin's acid mantle (pH 4.5-5.5) inhibits bacterial and fungal growth. Strongly alkaline soap raises skin pH, disrupting this protective barrier and allowing pathogens to colonise, worsening conditions like eczema."
+          },
+          {
+            "questionId": "s4-h3",
+            "type": "fill_blank",
+            "difficulty": "hard",
+            "question": "When bacteria convert milk sugar (lactose) to lactic acid, the pH of milk drops from about 6.5 to below 5.0, causing milk proteins called ___ to denature and solidify — the basis of yoghurt and cheese making.",
+            "correctAnswer": "caseins",
+            "hint": "Milk proteins are mostly a family called ___ins — the main one that solidifies is a casein.",
+            "explanation": "Lactic acid lowers pH below the isoelectric point of caseins (milk's main proteins), causing them to unfold and coagulate — the solid curds used to make cheese and the thickened structure of yoghurt."
+          },
+          {
+            "questionId": "s4-h4",
+            "type": "scenario",
+            "difficulty": "hard",
+            "scenarioParagraph": "Ocean water naturally has a pH of about 8.1. Scientists have measured a drop to 8.05 over the last century due to increased atmospheric CO₂ dissolving in the ocean. Coral reefs, made of calcium carbonate (CaCO₃), are bleaching worldwide.",
+            "question": "Explain the chemistry connecting rising CO₂ to coral reef damage.",
+            "options": [
+              "CO₂ + H₂O → H₂CO₃ (carbonic acid), lowering pH → H₂CO₃ dissolves CaCO₃ coral skeletons",
+              "CO₂ reacts with coral to produce CO and bleach it white",
+              "CO₂ makes water warmer, and heat dissolves calcium carbonate",
+              "CO₂ reduces oxygen levels, and corals need oxygen to build their skeletons"
+            ],
+            "correctAnswer": "CO₂ + H₂O → H₂CO₃ (carbonic acid), lowering pH → H₂CO₃ dissolves CaCO₃ coral skeletons",
+            "hint": "CO₂ dissolves in water to form a weak acid. That acid reacts with carbonate (CO₃²⁻) in coral.",
+            "explanation": "CO₂ + H₂O → H₂CO₃ (carbonic acid). This lowers ocean pH. H₂CO₃ reacts with CaCO₃ → Ca²⁺ + 2HCO₃⁻, dissolving coral skeletons faster than corals can build them — ocean acidification."
+          }
+        ]
+      }
+    }
+  ]
+}
