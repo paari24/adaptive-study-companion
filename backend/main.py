@@ -24,6 +24,7 @@ app.add_middleware(
         "http://localhost:3000",
         "http://127.0.0.1:3000",
         "http://udff9yy7ztpky58439n5zb3s.72.61.225.68.sslip.io",
+        "https://udff9yy7ztpky58439n5zb3s.72.61.225.68.sslip.io",
     ],
     allow_credentials=True,
     allow_methods=["*"],
