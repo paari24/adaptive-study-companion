@@ -21,7 +21,8 @@ _engine = None
 def get_engine():
     global _engine
     if _engine is None:
-        _engine = create_engine(os.getenv("DATABASE_URL"), pool_pre_ping=True)
+        db_url = os.getenv("DATABASE_URL", "").replace("postgres://", "postgresql://", 1)
+        _engine = create_engine(db_url, pool_pre_ping=True)
     return _engine
 
 

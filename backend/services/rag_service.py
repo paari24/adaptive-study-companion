@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:postgres@localhost:5432/studycompanion")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:postgres@localhost:5432/studycompanion").replace("postgres://", "postgresql://", 1)
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 
 _engine = None
