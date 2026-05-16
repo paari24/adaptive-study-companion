@@ -3,7 +3,7 @@ import { DEMO_MODE } from './stateDetector';
 
 export const MONITOR_INTERVAL_MS = DEMO_MODE ? 10_000 : 30_000;
 export const TAB_HIDDEN_THRESHOLD_MS = 15_000;
-const IDLE_NUDGE_THRESHOLD_MS = 3 * 60 * 1000; // 3 minutes
+const IDLE_NUDGE_THRESHOLD_MS = DEMO_MODE ? 60 * 1000 : 3 * 60 * 1000; // 1 min demo / 3 min prod
 // Reading content without interaction is normal — don't fire idle events for this many checks
 const IDLE_GRACE_CHECKS = DEMO_MODE ? 6 : 10; // 60s grace in demo, 5 min in prod
 

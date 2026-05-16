@@ -482,6 +482,28 @@ export function LearningSessionProvider({
     };
   }, [currentSection?.sectionId, state.isInAssessment, dispatchEvent]);
 
+  // ── Inject chat nudge when behavioural state changes ─────────────────────
+  const prevActiveStateRef = useRef<string>(state.behavioralState.activeState);
+  useEffect(() => {
+    const newState = state.behavioralState.activeState;
+    const prev = prevActiveStateRef.current;
+    if (newState === prev || !currentSection) return;
+    prevActiveStateRef.current = newState;
+
+    const nudges: Record<string, string> = {
+      fatigued:   "😴 You've been studying hard — feeling a bit tired? Take a short break, stretch, and come back fresh. I'll be right here!",
+      struggling: "💪 This part is tricky — that's totally okay! Ask me anything and I'll explain it a different way.",
+      bored:      "🤔 Looks like you're breezing through this! Want me to challenge you with something harder?",
+      engaged:    "🌟 Great — you're back on track! Keep going!",
+    };
+
+    const msg = nudges[newState];
+    if (msg) {
+      dispatch({ type: 'INJECT_NUDGE', sectionId: currentSection.sectionId, text: msg });
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.behavioralState.activeState]);
+
   // ── Persist to localStorage whenever state changes ─────────────────────────
   useEffect(() => {
     if (!state.topic) return;

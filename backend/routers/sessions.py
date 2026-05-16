@@ -115,6 +115,15 @@ def save_session(req: SaveSessionRequest):
     try:
         engine = get_engine()
         with engine.connect() as conn:
+            # Verify user_mobile exists — if not, save without it to avoid FK violation
+            user_mobile = req.userMobile
+            if user_mobile:
+                exists = conn.execute(
+                    text("SELECT 1 FROM users WHERE mobile = :m"), {"m": user_mobile}
+                ).fetchone()
+                if not exists:
+                    user_mobile = None
+
             conn.execute(text("""
                 INSERT INTO user_sessions (
                     id, topic_id, topic_title, started_at, completed_at,
@@ -162,7 +171,7 @@ def save_session(req: SaveSessionRequest):
                 "state_history": json.dumps([s.model_dump() for s in req.stateHistory]),
                 "section_results": json.dumps([r.model_dump() for r in req.sectionResults]),
                 "event_summary": json.dumps(event_summary),
-                "user_mobile": req.userMobile,
+                "user_mobile": user_mobile,
             })
             conn.commit()
         return SaveSessionResponse(sessionId=session_id, message="Session saved")
