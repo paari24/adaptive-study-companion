@@ -5,6 +5,7 @@ GET  /api/users           — all users with aggregate stats
 GET  /api/users/{mobile}  — single user + their full session history
 """
 import json
+import logging
 from datetime import datetime, timezone
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
@@ -14,6 +15,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)
+
 router = APIRouter()
 
 _engine = None
@@ -21,7 +25,9 @@ _engine = None
 def get_engine():
     global _engine
     if _engine is None:
-        db_url = os.getenv("DATABASE_URL", "").replace("postgres://", "postgresql://", 1)
+        raw = os.getenv("DATABASE_URL", "")
+        db_url = raw.replace("postgres://", "postgresql://", 1)
+        logger.info(f"[DB] connecting to: {db_url}")
         _engine = create_engine(db_url, pool_pre_ping=True)
     return _engine
 
